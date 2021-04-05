@@ -53,7 +53,7 @@
                    ]);
 
             $result2 = $r->rowCount();
-            
+            //erfberhfrehrb
 
            if($result1 ==true && $result2 ==false){
             $q= $db ->prepare("INSERT INTO carte(nom, num, date, crypto) VALUES(:nom, :num, :date, :crypto)");
