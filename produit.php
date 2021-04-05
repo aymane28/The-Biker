@@ -65,6 +65,7 @@ $q->closeCursor();
 
 <form method="post">
 <input type="submit" name="change" value="Modifications des informations">
+<input type="submit" name="payer" value="payer">
 </form>
 
 <?php
@@ -73,9 +74,15 @@ if(isset($_POST['change']))
     extract($_POST);
     header('Location: modifications.php');
     exit;
-    ob_end_flush();
+    
 }  
-?>
+
+if(isset($_POST['payer'])){
+    extract($_POST);
+    header("Location: carte.php");
+    exit();}
+    ob_end_flush();
+                ?>
 
 <?php
     if(isset($_POST['valinc'])){
@@ -92,6 +99,12 @@ if(isset($_POST['change']))
     le prix est de : <?php echo $donnees['prix']; ?>euros ! <br />la description <?php echo $donnees['description']; ?><br />
 </p>
 <?php echo "vous avez choisi cette moto !"; ?>
+
+<form method="post">
+
+</form>
+
+
 
 
 <?php
