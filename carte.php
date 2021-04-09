@@ -7,14 +7,33 @@
 <strong>Inserer votre carte<Strong>
 </head>
 <body>
-<link rel="stylesheet" href="style.css" />
-
+<link rel="stylesheet" href="styleaymane.css" />
 <p> Bienvenue: <?=$_SESSION['pseudo']; ?> </p>
 <p> Votre mail : <?=$_SESSION['email']; ?> </p>
 
 
+<div class="aymane" >
+aymaneeee
+</div>
+
+
 <form method="post" >
-    <p> insérez votre identifiant</p>
+<div  class="aymane" > 
+    <label for="staticEmail2" class="sr-only">Email</label>
+    <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
+  </div>
+  <div class="aymane">
+    <label for="inputPassword2" class="sr-only">Password</label>
+    <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+  </div>
+  <button type="button" class="btn btn-success">Confirm identity</button>
+
+
+<div  class="aymane">
+    <label1 >Password</label1>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+    <div> insérez votre identifiant</div></br>
     <input type="text" name="nom" id="nom" placeholder="Identifiant" required> <br/>
     <p> insérez le numéro de votre carte </p>
     <input type="number" name="num" id="num" placeholder="numéro de la carte" maxlength="16" required> <br/>
