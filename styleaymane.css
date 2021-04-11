@@ -17,7 +17,7 @@
     background-color: #FFCCCC;
     width: 200px;
     height: 200px;
-    transition-timing-function: step-end
+    transition-timing-function: step-end;
   }
 
  .label1{
