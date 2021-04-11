@@ -35,9 +35,7 @@ $current_value=0;
 
 <p>Cette boîte utilisera des transitions pour width, height, background-color, transform.
    Survolez cette boîte pour voir l'effet.</p>
-<div class="box">
-<img src="picture.jpg"  />
-</div>
+
 
 <form name="form1" method="get">
     <div class="label">
