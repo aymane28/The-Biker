@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="styleaymane.css" />
 <p> Bienvenue: <?=$_SESSION['pseudo']; ?> </p>
 <p> Votre mail : <?=$_SESSION['email']; ?> </p>
-
+<p></p>
 
 <div class="aymane" >
 aymaneeee

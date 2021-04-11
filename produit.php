@@ -7,7 +7,7 @@
 <title>Page Title</title>
 </head>
 <body>
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="styleaymane.css" />
 
 <p> Bienvenue: <?=$_SESSION['pseudo']; ?> </p>
 <p> Votre mail : <?=$_SESSION['email']; ?> </p>
@@ -33,6 +33,12 @@ $current_value=0;
 }
 ?>
 
+<p>Cette boîte utilisera des transitions pour width, height, background-color, transform.
+   Survolez cette boîte pour voir l'effet.</p>
+<div class="box">
+<img src="picture.jpg"  />
+</div>
+
 <form name="form1" method="get">
     <div class="label">
     <input type="text" id="name" name="current_value" value="<?php echo $current_value; ?>"/>
@@ -47,7 +53,7 @@ while ($donnees = $q->fetch())
 
 <p>
     <strong>La moto</strong> : <?php echo $donnees['titre']; ?><br />
-    La marque : <?php echo $donnees['marque']; ?>, voici la photo echo <img src="<?php echo $donnees['image'];?>"><br />
+    La marque : <?php echo $donnees['marque']; ?>, voici la photo echo <div class="box"><img src="<?php echo $donnees['image'];?>"></div> <br />
     le prix est de : <?php echo $donnees['prix']; ?>euros ! <br />la description <?php echo $donnees['description']; ?><br />
 
     <form name="form1" method="get">
