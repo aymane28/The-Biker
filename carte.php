@@ -49,7 +49,7 @@ aymaneeee
 <?php include 'database.php';  global $db;?>
 
 
-<p>aymane je sais pas quieufugsfgzehfguhzeru</p>
+<p>aymane je sais pas ce que je fais ici</p>
 
 <?php
 //action="panier.php"
