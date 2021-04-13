@@ -18,7 +18,7 @@
     background-color: #FFCCCC;
     width: 200px;
     height: 200px;
-    transform: rotate(360);
+    transform: rotate(360deg);
   }
 
  .label1{
