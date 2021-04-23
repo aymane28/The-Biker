@@ -3,29 +3,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-<h1> page pour modifier ses informations <h1>
+
 
 <p> Mofication des informations de la part de: <?=$_SESSION['pseudo']; ?> </p>
 
-<title>Page Title</title>
+<title>Modifications</title>
 </head>
 <body>
+<link rel="stylesheet" href="styme.css" />
+<?php include 'data/database.php'; global $db; ?>
 
-<?php include 'database.php'; global $db; ?>
-
-<h1>Modifications</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-5 col-md-4 text-center">
+            <h1 class='text-white'>Carte</h1>
+              <div class="form-login"></br>
+                
 <form method="post">
 
-    <strong>entrer son identifiant actuel</strong>
-    <input type="text" name="dpseudo" id="dpseudo" placeholder="Identifiant" required> <br/><br/>
-
-    <em>changer son identifiant </em>
-    <pre> entrer votre nouveau identifiant</pre>
-    <input type="text" name="mpseudo" id="mpseudo" placeholder="Identifiant" required> <br/><br/><br/><br/>
-
-    <input type="password" name="lpassword" id="lpassword" placeholder="the password" required><br/><br/>
-    <input type="submit" value="Valider" name="fronlogin" id="Login">
+    <div class="pretext" ><pre>Entrer son identifiant actuel</pre> </div>
+    <input type="text" name="dpseudo" id="dpseudo" class="form-control input-sm chat-input" placeholder="Identifiant" required> <br/>
+    <div class="pretext" ><pre> Entrer votre nouveau identifiant</pre> </div>
+    <input type="text" name="mpseudo" id="mpseudo" class="form-control input-sm chat-input" placeholder=" Nouveau identifiant" required> <br/>
+    </br>
+    <input type="password" name="lpassword" id="lpassword" class="form-control input-sm chat-input" placeholder="Mot de passe" required><br/>
+    </br>
+    <input type="submit" value="Valider" class="btn-danger" name="fronlogin" id="Login">
 </form>
+</br>
+                </div>
+        </div>
+    </div>
+    </br></br></br>    
+</div>
 
 
 <?php
@@ -48,26 +58,30 @@ if(isset($_POST['fronlogin'])){
             
             $q ->execute([
             'pseudo' =>$_POST['dpseudo']
-            ]);
-            echo "l'identifiant a été modifié"; 
-        }else{
-            echo "l'identifiant n'a pas été modifié"; 
+            ]); ?>
+
+           <div class="sentence" > <?php  echo "l'identifiant a été modifié";  ?> </div>
+                <?php
+        }else{ ?>
+            <div class="sentence" > <?php  echo "l'identifiant n'a pas été modifié";  ?> </div>
+       <?php
         }
     
         if($result == true){
             //le compte exixte bien
             $hashpassword = $result['password'];
-            if(password_verify($lpassword, $result['password'])){
-                echo "le mot de passe est bon";
-            }else{
-                echo "le mot de passe n'est pas correcte";
-            }
-        }else{
-            echo "le compte portant lepseudo ".$_POST['dpseudo']."n'existe pas";
-        }
+            if(password_verify($lpassword, $result['password'])){ ?>
+                <div class="sentence" > <?php   echo "le mot de passe est bon";  ?> </div>
+           <?php }else{ ?>
+                <div class="sentence" > <?php   echo "le mot de passe n'est pas correcte";  ?> </div>
+           <?php }
+        }else{ ?>
+            <div class="sentence" > <?php   echo "le compte portant lepseudo ".$_POST['dpseudo']."n'existe pas";  ?> </div>
+         <?php }
     }
-    else{
-        echo " veuillez compléter l'ensemble des champs";
+    else{ ?>
+        <div class="sentence" > <?php  echo " veuillez compléter l'ensemble des champs";  ?> </div>
+        <?php
     }
 }
 ?>

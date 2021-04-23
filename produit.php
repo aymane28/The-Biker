@@ -7,7 +7,7 @@
 <title>Page Title</title>
 </head>
 <body>
-<link rel="stylesheet" href="styleaymane.css" />
+<link rel="stylesheet" href="css/style.css" />
 
 <p> Bienvenue: <?=$_SESSION['pseudo']; ?> </p>
 <p> Votre mail : <?=$_SESSION['email']; ?> </p>
@@ -16,7 +16,7 @@
 <h1>les produits </h1>
 </div>
 
-<?php include 'database.php'; global $db;?>
+<?php include 'data/database.php'; global $db;?>
 
 <?php
 //print_r($_GET);
@@ -33,8 +33,6 @@ $current_value=0;
 }
 ?>
 
-<p>Cette boîte utilisera des transitions pour width, height, background-color, transform.
-   Survolez cette boîte pour voir l'effet.</p>
 
 
 <form name="form1" method="get">

@@ -3,53 +3,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>carte</title>
-<strong>Inserer votre carte<Strong>
+<title>Carte</title>
+
 </head>
 <body>
-<link rel="stylesheet" href="styleaymane.css" />
+<link rel="stylesheet" href="styme.css" />
 <p> Bienvenue: <?=$_SESSION['pseudo']; ?> </p>
 <p> Votre mail : <?=$_SESSION['email']; ?> </p>
 <p></p>
 
-<div class="aymane" >
-aymaneeee
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-5 col-md-4 text-center">
+            <h1 class='text-white'>Carte</h1>
+              <div class="form-login"></br>
+                </br>
+                <form method="post">
+    
+    <input type="text" name="nom" id="nom"class="form-control input-sm chat-input" placeholder="Identifiant" required> <br/>
+    </br>
+    <input type="text" name="num" id="num"class="form-control input-sm chat-input" placeholder="Numéro de la carte" maxlength="16" required> <br/>
+    </br>
+    <input  type="text" name="date" id="date" class="form-control input-sm chat-input" placeholder="Date d'expiration" maxlength="4" required><br/>
+    </br>
+    <input type="text" name="crypto" id="crypto"class="form-control input-sm chat-input" placeholder="Cryptogramme visuel" maxlength="3"  required><br/>
+    </br>
+    <input type="submit" value="Valider" class="btn-danger"name="fronsend" id="Login"></br>
+    </div>
+                </form>
+                </br>
+                </div>
+        </div>
+    </div>
+    </br></br></br>    
 </div>
 
-
-<form method="post" >
-<div  class="aymane" > 
-    <label for="staticEmail2" class="sr-only">Email</label>
-    <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
-  </div>
-  <div class="aymane">
-    <label for="inputPassword2" class="sr-only">Password</label>
-    <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-  </div>
-  <button type="button" class="btn btn-success">Confirm identity</button>
+<?php include 'data/database.php';  global $db;?>
 
 
-<div  class="aymane">
-    <label1 >Password</label1>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-    <div> insérez votre identifiant</div></br>
-    <input type="text" name="nom" id="nom" placeholder="Identifiant" required> <br/>
-    <p> insérez le numéro de votre carte </p>
-    <input type="number" name="num" id="num" placeholder="numéro de la carte" maxlength="16" required> <br/>
-
-    <p> Date d'expiration </p>
-    <input type="date" name="date" id="date" placeholder="date d'expiration" maxlength="4" required><br/>
-
-    <p>entrer votre cryptogramme visuel</P>
-    <input type="number" name="crypto" id="crypto" placeholder="cryptogramme visuel" maxlength="3"  required><br/>
-    <input type="submit" value="Valider" name="fronsend" id="Login"></br>
-</form>
-
-<?php include 'database.php';  global $db;?>
-
-
-<p>aymane je sais pas ce que je fais ici</p>
 
 <?php
 //action="panier.php"
@@ -88,13 +81,15 @@ aymaneeee
             
              // header("Location: panier.php");
 
-            }else{
-            echo "votre identifiant n'est pas bon ou est déjà lié à une autre carte";}
+            }else{ ?>
+                <div class="sentence" > <?php echo "Votre identifiant n'est pas bon ou est déjà lié à une autre carte";} ?> </div>
+            <?php
         }
 
         
     }
 ?>
+
 
 
 

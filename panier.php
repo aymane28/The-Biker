@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+<title>Panier</title>
 </head>
 <body>
 
-<h1>Le panier </h1>
-
-<?php include 'database.php';
+<body
+background="blue.jpg"></bodybackground>
+    <link rel="stylesheet" href="stype.css" />
+    <link rel="stylesheet" href="styme.css" />
+<?php include 'data/database.php';
             global $db;?>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-5 col-md-4 text-center">
+            <h1 class='text-white'>Connexion</h1>
+              <div class="form-login"></br>
+                </br>
+
+<form method="post">
+    <input type="text" name="lpseudo" id="lpseudo" class="form-control input-sm chat-input"placeholder="Identifiant" required> <br/>
+    </br>
+    <input type="password" name="lpassword" id="lpassword" class="form-control input-sm chat-input"placeholder="Mot de passe" required><br/>
+    </br>
+    <input type="submit" name="fronlogin" id="Login">
+</form>
+
+                <h4> Creer un compte </h4>
+            </div>
+        </div>
+    </div>
+    </br></br></br>    
+</div>
+
+
 
 
 
@@ -18,16 +45,22 @@
 //print_r($_GET);
 if(isset($_GET["current_value"]))
 {
-if(isset($_GET["valinc"]))
-{
-$current_value=$_GET["current_value"]+1;
-}else{
-$current_value=$_GET["current_value"]-1;
+    if(isset($_GET["valinc"]))
+    {
+         $current_value=$_GET["current_value"]+1;
+    }
+    elseif(isset($_GET["valdec"]) && $_GET["current_value"] !=0)
+    {   
+          $current_value=$_GET["current_value"]-1;
+    }else{
+        $current_value=0;
+    }
 }
-}else{
-$current_value=0;
-}
+else{
+    $current_value=0;
+    }
 ?>
+
 
 
 

@@ -1,23 +1,85 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Page Title</title>
-<strong>bienvenue sur notre site de vente de moto<Strong>
-</head>
-<body>
-<link rel="stylesheet" href="style.css" />
+    <head>
+        <meta charset="utf-8" />
+        <title>Acceuil</title>
+        
+    </head>
+ 
+    <body>
+    <body
+    background="blue.jpg"></bodybackground>
+    <link rel="stylesheet" href="stype.css" />
+    <!-- L'en-tête -->
+    
+  
+<header>
+      <h1 id="logo"><a href="">The biker</a></h1>
+      <nav>
+        <ul>
+          <li class="active"><a href="">Acceuil</a></li>
+         
+          <li class="deroulant"><a href="">Articles </a>
+            <ul class="sous">
+            <li><a href="#">type 1</a></li>
+            <li><a href="#">type 2</a></li>
+            <li><a href="#">type 3</a></li>
+            <li><a href="#">type 4</a></li>
+            <li><a href="#">type 5</a></li>
+            <li><a href="#">type 6</a></li>
+        </ul>
+        </li>
+        </ul>
+      </nav>
 
-<form method="post">
-    <input type="submit" value="Se connecter" name="fronlogin" id="Login">
-</form>
+      <nav class="responsive2">
+      <ul>
+      
+      <li class="responsive2"><a href="panier.php">Panier</a> </li>
+      
+        <li><a href="testconnexion.php">Compte</a></li>
+        
+    </ul>
+    <a href="panier.php"> <img class="img4" src="panier.png"/></a>
+</ul>   
+</nav>
+</header>
+ 
+    
+    <!-- Le corps -->
+    <section class="hero grid3">
+        
+  <h2>The Biker</h2>
+      <h1>Venez découvrir notre site de vente de moto</h1>
+      <p>Nous vous proposons différentes marques de moto.</p>
+      <a href="" class="button normal green">Savoir plus</a>
+    </section>
+    
+
+  
+    <img class="img1" src="https://so-sport.fr/wp-content/uploads/2018/08/course-moto-route.jpg">
+   
+     <img class="img2" src="https://dkzqmqjr9uy7w.cloudfront.net/dfb30247-ba31-4b0f-a718-340bec332ceb/assets/e0cf3b55-ee2c-46ec-8b96-3e1e2bee7271.jpg" >
+     <img class="img1" src="https://so-sport.fr/wp-content/uploads/2018/08/course-moto-route.jpg">
+</br> </br></br></br>
+   
+    
+    <!-- Le pied de page -->
+    
+    <footer>
+      <h4>The Biker</h4>
+      <ul class="social">
+        <li><a href=""><img src="https://i.imgur.com/xUT72NF.png" alt="" /></a></li>
+        <li><a href=""><img src="https://i.imgur.com/yWRhsGj.png" alt="" /></a></li>
+      </ul>
+    </footer>
+  </main>
+    
+    </body>
+</html>
 
 
-<?php
-if(isset($_POST['fronlogin'])){
-    extract($_POST);
-    header("Location: connexion.php");
-    exit();}
-                ?>
+                <?php include 'data/database.php';  global $db;?>
 
 </body>
 </html>

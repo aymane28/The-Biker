@@ -3,10 +3,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+<title>Connexion</title>
 </head>
 <body>
 
+<link rel="stylesheet" href="styme.css" />
+<link rel="stylesheet" href="css/style.css" />
 <h1>Bienvenue dans notre site de vente </h1>
 
 <?php
@@ -20,25 +22,41 @@ if(isset($_SESSION['lpseudo']) && ($_SESSION['lemail'])){
     echo "veuillez vous connectez";}
 ?>
 
-<h1>login</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-5 col-md-4 text-center">
+            <h1 class='text-white'>Connexion</h1>
+              <div class="form-login"></br>
+                </br>
+
 <form method="post">
-    <input type="text" name="lpseudo" id="lpseudo" placeholder="Identifiant" required> <br/>
-    <input type="text" name="lemail" id="lemail" placeholder="votre email" required><br/>
-    <input type="password" name="lpassword" id="lpassword" placeholder="the password" required><br/>
+    <input type="text" name="lpseudo" id="lpseudo" class="form-control input-sm chat-input"placeholder="Identifiant" required> <br/>
+    </br>
+    <input type="password" name="lpassword" id="lpassword" class="form-control input-sm chat-input"placeholder="Mot de passe" required><br/>
+    </br>
     <input type="submit" name="fronlogin" id="Login">
 </form>
 
-<?php include 'database.php';  global $db;?>
+                <h4> Creer un compte </h4>
+            </div>
+        </div>
+    </div>
+    </br></br></br>    
+</div>
+
+<?php include 'data/database.php';  global $db;?>
+
+
 
 <?php
 if(isset($_POST['fronlogin'])){
     extract($_POST);
     global $db;
 
-    if(!empty($_POST['lpseudo']) && !empty($_POST['lemail']) && !empty($_POST['lpassword']))
+    if(!empty($_POST['lpseudo'])  && !empty($_POST['lpassword']))
     {
-        $q = $db -> prepare("SELECT * FROM utilisateurs WHERE email = :email");
-        $q -> execute(['email' => $_POST['lemail']]);
+        $q = $db -> prepare("SELECT * FROM utilisateurs WHERE pseudo = :pseudo");
+        $q -> execute(['pseudo' => $_POST['lpseudo']]);
         $result= $q -> fetch();
 
         if($result == true){
@@ -55,7 +73,7 @@ if(isset($_POST['fronlogin'])){
             }else{
                 echo "le mot de passe n'est pas correcte";}
         }else{
-            echo "le compte portant le mail ".$_POST['lemail']."n'existe pas";}
+            echo "le compte portant l'identifiant' ".$_POST['lpseudo']."n'existe pas";}
     }else{
         echo " veuillez compléter l'ensemble des champs"; }
 }
