@@ -1,40 +1,38 @@
 <?php session_start();?>
-
 <!DOCTYPE html>
 <html>
 <head>
-
-
-<p> Mofication des informations de la part de: <?=$_SESSION['pseudo']; ?> </p>
-
 <title>Modifications</title>
 </head>
 <body>
-<link rel="stylesheet" href="styme.css" />
+<link rel="stylesheet" href="styse.css" />
+<link rel="stylesheet" href="/css/styne.css" />
+
+
 <?php include 'data/database.php'; global $db; ?>
 
-<div class="container">
-    <div class="row">
+<div class="container4">
+    <div class="row4">
         <div class="col-md-offset-5 col-md-4 text-center">
-            <h1 class='text-white'>Carte</h1>
-              <div class="form-login"></br>
-                
-<form method="post">
+            <h1 class='text-white'>Modifier vos informations</h1></br>
+              <div class="form-login4">
+                <div class="total2" >
+                    <form method="post">
 
-    <div class="pretext" ><pre>Entrer son identifiant actuel</pre> </div>
-    <input type="text" name="dpseudo" id="dpseudo" class="form-control input-sm chat-input" placeholder="Identifiant" required> <br/>
+                    <p> Identifiant: </p>
+    <input type="text" name="dpseudo" id="dpseudo" class="form-control2 input-sm chat-input" placeholder="Identifiant" required> <br/>
+    <input type="text" name="mpseudo" id="mpseudo" class="form-control2 input-sm chat-input" placeholder=" Nouveau identifiant" required> <br/>
+
     <div class="pretext" ><pre> Entrer votre nouveau identifiant</pre> </div>
-    <input type="text" name="mpseudo" id="mpseudo" class="form-control input-sm chat-input" placeholder=" Nouveau identifiant" required> <br/>
+    <input type="text" name="mpseudo" id="mpseudo" class="form-control2 input-sm chat-input" placeholder=" Nouveau identifiant" required> <br/>
     </br>
-    <input type="password" name="lpassword" id="lpassword" class="form-control input-sm chat-input" placeholder="Mot de passe" required><br/>
+    <input type="password" name="lpassword" id="lpassword" class="form-control2 input-sm chat-input" placeholder="Mot de passe" required><br/>
     </br>
     <input type="submit" value="Valider" class="btn-danger" name="fronlogin" id="Login">
-</form>
-</br>
-                </div>
+    </form> </br> </div></br></br>
+                 </div>
         </div>
-    </div>
-    </br></br></br>    
+    </div></br></br></br>    
 </div>
 
 

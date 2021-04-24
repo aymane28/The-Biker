@@ -1,25 +1,23 @@
 
-  body.blue {
+body.blue {
     background: #adc9d2;
     background: linear-gradient(to bottom, #adc9d2 0%,#769dab 100%);
-  }
-  body.grey {
+ }
+
+body.grey {
     background: #525b64;
     background: linear-gradient(to bottom, #525b64 0%,#3e4750 100%);
   }
   
   /*** GENERAL STAFF ***/
-  main {
-    display: block;
-    width: 1160px;
-    margin: 0 auto;
-  }
-  h1,h2,h3,h4,h5,h6 {margin: 0; padding: 0}
+ 
+h1,h2,h3,h4,h5,h6 {margin: 0; padding: 0}
   a, input, textarea {
     text-decoration: none;
     outline: none;
     transition: all .25s ease-in-out;
   }
+
   header,
   section,
   article,
@@ -37,7 +35,7 @@ header {
     background: linear-gradient(to bottom, #ffffff 0%,#f3f3f3 100%);
 }
   
-  #logo a {
+#logo a {
     float: left;
     padding: 12px 40px;
     border-right: 1px solid #b4b4b4;
@@ -46,14 +44,17 @@ header {
     color: #333;
   }
   
-  nav, nav ul {
+nav, nav ul {
     display: inline-block;
-   
     list-style: none;
     margin: 0; padding: 0
-  }
-  nav ul li {display: inline-block;}
-  nav ul li a {
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
     display: block;
     margin: 12px 0 0 45px;
     padding-bottom: 12px;
@@ -62,19 +63,25 @@ header {
     color: #444;
     text-transform: uppercase;
   }
-  nav ul li a:hover {border-bottom: 3px solid #444;}
-  nav ul li.active a {
+
+nav ul li a:hover {
+  border-bottom: 3px solid #444;
+}
+
+nav ul li.active a {
     font-weight: 900;
     border-bottom: 3px solid #444;
-  }
-  .responsive {
+}
+
+.responsive {
     display: none;
     margin: 5px 30px 0;
     background: #666;
     box-shadow: inset 0 0 8px rgba(0,0,0,1);
     text-align: center;
   }
-  .responsive span {
+
+.responsive span {
     display: block;
     padding: 10px;
     font: 14px 'Lato';
@@ -82,6 +89,7 @@ header {
     color: #f7f7f7;
     cursor: pointer;
   }
+
   .responsive ul {display: none; float: none;}
   .responsive ul li {display: block !important;}
   .responsive ul li a {
@@ -91,25 +99,23 @@ header {
     text-shadow: 1px 1px 1px #222;
   }
   
-  .responsive2{
-    
+.responsive2{
     float: right;
-   
     margin-right: 29px;
-   
   }
-  form.search {
+
+form.search {
     display: block;
     float: right;
   }
   
-  .img4{
+.img4{
       width: 10%;
       bottom: 10%;
       margin: -4px;
   }
 
-  form.search input[type=search] {
+form.search input[type=search] {
     width: 175px;
     margin-right: 15px;
     padding: 12px 10px;
@@ -119,29 +125,32 @@ header {
     font: 13px 'Lato';
     color: #333;
     background: transparent;
-  }
-  form.search input[type=submit] {
+}
+
+form.search input[type=submit] {
     float: left;
     margin: 10px 7px;
     width: 20px; height: 20px;
     border: none;
     background: transparent url(https://i.imgur.com/pFlgq6b.png) no-repeat center center;
-  }
+}
   
-  .hero {
+.hero {
     display: block;
     height: 500px;
     margin: 40px 0;
     box-shadow: 0 7px 16px -2px rgba(0,0,0,.3);
     background:  left/100% url(https://image.freepik.com/vecteurs-libre/concept-vue-avant-moto-classique-monochrome_225004-1243.jpg);
-  }
-  .hero h1 {
+}
+
+.hero h1 {
     margin: 195px 0 0 40px;
     font: 21px 'Lato';
     font-weight: 700;
     color: #444;
-  }
-  .hero h2{
+}
+
+.hero h2{
     font-size: 38px;
     letter-spacing: 2px;
     text-shadow: 2px 2px rgb(117, 190, 64);
@@ -152,24 +161,27 @@ header {
     left: 0;
     right: 0;
   }
-  .hero p {
+
+.hero p {
     margin: 20px 40px 40px 40px;
     width: 495px;
     font: 14px/28px 'Lato';
     color: #444;
-  }
-  .hero .button {
-    margin-left: 40px;
-  }
+}
 
-  product {
+.hero .button {
+    margin-left: 40px;
+}
+
+.product {
     display: block;
     float: left;
     width: 360px;
     margin: 0 40px 40px 0;
     box-shadow: 0 7px 16px -2px rgba(0,0,0,.3);
   }
- .img1{
+
+.img1{
     display: block;
     border-radius: 40px;
     display: block;
@@ -177,7 +189,7 @@ header {
      margin-right: auto; 
     width: 30%;
     margin-left: 5%;
-  }
+ }
   
   .img2{
     display: block;
@@ -187,40 +199,47 @@ header {
     /* margin-right: auto; */
     width: 30%;
     margin-right: 5%;
-  
   }
 
-  .product .info {
+.product .info {
     display: block;
     padding: 20px 30px;
     background: #f8f8f8;
     background: linear-gradient(to bottom, #f8f8f8 0%,#f3f3f3 100%);
-  }
+ }
+
   .product .info h1 {
     font: 21px 'Lato';
     font-weight: 700;
     color: #444;
   }
-  .product .info small {
+
+.product .info small {
     display: block;
     margin: 10px 0;
     font: 12px 'Lato';
     color: #444;
   }
-  .product .info .size {
+
+.product .info .size {
     display: block;
     margin: 10px 0;
     font: 12px 'Lato';
     font-weight: 900;
     color: #444;
-  }
-  .product .info .size a {
+}
+
+.product .info .size a {
     margin-left: 8px;
     font: 10px 'Lato';
     font-weight: 500;
     color: #65a0b8;
+ }
+
+  .product .info .size a:hover {
+    color: #cc0000;
   }
-  .product .info .size a:hover {color: #cc0000;}
+
   .product .info .price {
     display: inline-block;
     margin-top: 15px;
@@ -228,17 +247,16 @@ header {
     font-weight: 900;
     color: #444;
   }
+
   .product .info .button {
     float: right;
     margin-top: 15px;
   }
   
-
   /*** FOOTER ***/
 footer {
     display: block;
     clear: both;
-    
     box-shadow: 0 7px 16px -2px rgba(0,0,0,.3);
     background: #ffffff;
     background: linear-gradient(to bottom, #ffffff 0%,#f3f3f3 100%);
@@ -254,6 +272,7 @@ footer {
     font-weight: 900;
     color: #333;
   }
+
   footer .social {
     float: right;
     margin-left: auto;
@@ -262,6 +281,7 @@ footer {
     margin-right: 29px;
     list-style: none;
   }
+
   footer .social li {
     float: left;
     margin: 19px 5px 0;
@@ -356,9 +376,6 @@ footer {
 
 /*Reset CSS*/
 
-
-
-
 .sous{
     display: none;
     box-shadow: 0px 1px 2px rgb(72, 209, 173);
@@ -368,6 +385,7 @@ footer {
     block-size: 7%;
     z-index: 1000;
 }
+
 nav > ul li:hover .sous{
     display: block;
     width: 100%;
@@ -377,14 +395,17 @@ nav > ul li:hover .sous{
     width: 10%;
     text-align: left;
 }
+
 .sous a{
     padding: 10px;
     border-bottom: none;
 }
+
 .sous a:hover{
     border-bottom: none;
     background-color: rgb(123, 223, 196);
 }
+
 .deroulant > a::after{
     content:" ▼";
     font-size: 12px;

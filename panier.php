@@ -4,42 +4,11 @@
 <title>Panier</title>
 </head>
 <body>
-
 <body
-background="blue.jpg"></bodybackground>
-    <link rel="stylesheet" href="stype.css" />
-    <link rel="stylesheet" href="styme.css" />
-<?php include 'data/database.php';
-            global $db;?>
+background="/img/blue.jpg"></bodybackground>
+<link rel="stylesheet" href="/css/styde.css" />
 
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-offset-5 col-md-4 text-center">
-            <h1 class='text-white'>Connexion</h1>
-              <div class="form-login"></br>
-                </br>
-
-<form method="post">
-    <input type="text" name="lpseudo" id="lpseudo" class="form-control input-sm chat-input"placeholder="Identifiant" required> <br/>
-    </br>
-    <input type="password" name="lpassword" id="lpassword" class="form-control input-sm chat-input"placeholder="Mot de passe" required><br/>
-    </br>
-    <input type="submit" name="fronlogin" id="Login">
-</form>
-
-                <h4> Creer un compte </h4>
-            </div>
-        </div>
-    </div>
-    </br></br></br>    
-</div>
-
-
-
-
-
-
+<?php include 'data/database.php';global $db;?>
 
 <?php
 //print_r($_GET);
@@ -55,21 +24,44 @@ if(isset($_GET["current_value"]))
     }else{
         $current_value=0;
     }
-}
-else{
-    $current_value=0;
-    }
+}else{
+    $current_value=0;}
 ?>
 
+<div class="container2">
+    <div class="row2">
+        <div class="col-md-offset-5 col-md-4 text-center">
+        <h1 class='text-white'>Total</h1>
+            <div class="form-login2">
+                <form method="post">
+                    <div class="total" >
+                        <p> Total </p><input type="text" class="form-control input-sm chat-input"value="0 €">
+                    </div></br></br>
+                </form></br>
+                     <a href="carte.php">
+                    <input  type="submit" name="fronlogin"  class="btn-danger" id="Login" value="Payement"></a>
+            </div>
+        </div>
+    </div></br></br></br>    
+</div>
 
 
-
-<form name="form1" method="get">
-    <input type="submit" name="valinc" value="ajoutez le produit">
-    <input type="submit" name="valdec" value="enlever le produit">
-    <input type="text" name="current_value" value="<?php echo $current_value; ?>"/>
-</form>
-
+<div class="container3">
+    <div class="row3">
+        <div class="col-md-offset-5 col-md-4 text-center">
+            <h1 class='text-white'>Mon Panier</h1>
+              <div class="form-login3" ></br>
+                    <form name="form2" method="get">
+                         <input type="submit" name="valinc" class="btn-danger1" value="Ajoutez le produit">
+                         <input type="submit" name="valdec" class="btn-danger2" value="Enlever le produit"></br></br>
+                        <input type="text" name="current_value"class="form-control1 input-sm chat-input" value="<?php echo $current_value; ?>"/>
+                        <img class ="img5" src="picture.jpg"></br> 
+                        <img class ="img6" src="https://moto-station.com/wp-content/uploads/2019/02/20/SHIVER.jpg">
+                    </form>
+                 </div>
+        </div></br></br></br>    
+    </div>
+</div>
 
 
 <?php
@@ -92,9 +84,5 @@ else{
 		
 		
 ?>
-
-
-
-
 </body>
 </html>
