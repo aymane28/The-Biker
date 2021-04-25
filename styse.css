@@ -11,7 +11,7 @@
     margin-left: center;
     margin-right: 509px;
     padding: 154px;
-    margin-top: center;
+    margin-top: -78px;
     margin-left: center;
     margin-right: 332px;
     padding: 154px;
@@ -86,14 +86,14 @@
   
   .form-login4 {
     background-color: rgba(0,0,0,0.55);
-    padding-top: 25px;
-    padding-bottom: 20px;
-    /* padding-left: 100%; */
-    /* padding-right: 100%; */
-    border-radius: 15px;
+    padding-top: 5px;
+    padding-bottom: -22px;
+    padding-left: 20px;
+    padding-right: 8px;
+    border-radius: 12px;
     border-color: #d2d2d2;
-    border-width: 5px;
-    color: rgb(213, 176, 28);
+    border-width: 43px;
+    color: rgb(95 199 156);
     box-shadow: 0 1px 0 #706565;
     text-align: left;
   }
@@ -132,13 +132,27 @@
   
   .form-control2{
     background: transparent!important;
-    color: rgb(206, 22, 22)!important;
+    color: rgb(245, 219, 219)!important;
     font-size: 17px!important;
     width: 150px;
     float: right;
-    margin-right: 31px;
+    margin-right: 32px;
     display: block;
+    border-radius: 6px;
   }
+
+  .form-control3{
+    background: transparent!important;
+    color: rgb(245, 219, 219)!important;
+    font-size: 17px!important;
+    width: 150px;
+    float: right;
+    
+    display: block;
+    border-radius: 6px;
+    margin-right: 220px;
+  }
+
   .item{
     color:white! 
   }
@@ -210,6 +224,7 @@
     background-color:#199e60;
     border-color:#199e60;
     padding: revert;
+    border-radius: 16px;
     font-size: 15px;
   }
   
@@ -218,6 +233,7 @@
       background-color:#1c6845;
       border-color:#466a52;
       padding: revert;
+      border-radius: 16px;
       font-size: 15px;
     }
   
@@ -226,17 +242,34 @@
       background-color:#c2a239;
       border-color:#adaf1f;
       padding: revert;
+      border-radius: 16px;
       font-size: 15px;
     }
 
     .btn-danger3{
-        color:#fff;
-    background-color:#199e60;
-    border-color:#199e60;
-    padding: revert;
-    font-size: 15px;
-        
+      color: #fff;
+      background-color: #199e60;
+      border-color: #199e60;
+      padding: revert;
+      margin-top: 21px;
+      margin-left: 133px;
+      border-radius: 16px;
+      font-size: 15px;  
     }
+    
+    .btn-danger4{
+      color: #fff;
+      background-color: #314d40;
+      border-color: #4d6161;
+      padding: revert;
+      margin-top: -12px;
+      margin-left: 128px;
+      margin-right: -37px;
+      border-radius: 13px;
+      margin-left: unset;
+      font-size: 15px;
+  }
+    
     
   .test{
     color:#78e1b0!important;
@@ -252,12 +285,22 @@
     left: 0;
     right: 0;
   }
+
+  .sentence5{
+    color: rgb(117, 190, 64)!important;
+    text-align: center;
+    text-align: center;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    right: 0;
+  }
   .sentence6{
     color: rgb(117, 190, 64)!important;
     text-align: center;
     text-align: center;
     position: absolute;
-    bottom: 11px;
+    bottom: 30px;
     left: 0;
     right: 0;
   }
@@ -267,7 +310,7 @@
     text-align: center;
     text-align: center;
     position: absolute;
-    bottom: 80px;
+    bottom: 95px;
     left: 0;
     right: 0;
   }
@@ -292,7 +335,25 @@
     right: 0;
   }
   
+  .sentence10{
+    color: rgb(209, 20, 23)!important;
+    text-align: center;
+    text-align: center;
+    position: absolute;
+    bottom: 125px;
+    left: 0;
+    right: 0;
+  }
   
+  .sentence11{
+    color: rgb(209, 20, 23)!important;
+    text-align: center;
+    text-align: center;
+    position: absolute;
+    bottom: 170px;
+    left: 0;
+    right: 0;
+  }
   .pretext{
     color:#83f0bd!important;
     font-size:15px!important;
@@ -326,3 +387,40 @@
   .total2{
     display: inline;
   }
+
+  
+
+  #conteneur img
+  {
+      display: none;
+      justify-content: space-between;
+  }
+
+  #galerie img{
+    display: block;
+  }
+
+  .container1 {
+    /* On ajoute une marge sur les cotés de l'écran */
+    padding-right: px;
+    padding-left: 15px;
+
+    /* Et on centre */
+    margin-right: auto;
+    margin-left: auto;
+
+    width: 100%;
+    max-width: 960px;
+
+    /* On centre */
+    margin: 0 auto;
+
+    /* Et on ajoute une marge (sur les petits écrans seulement) */
+    padding: 0 20px;
+
+    /*
+    * Le "box-sizing: border-box;" permet de ne pas impacter la width avec le padding
+    * La largeur max réelle du contenu est donc de 920px =&gt; 960 - (2 x 20)
+    */
+    box-sizing: border-box;
+}

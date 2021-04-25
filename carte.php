@@ -5,7 +5,7 @@
 <title>Carte</title>
 </head>
 <body>
-<link rel="stylesheet" href="/css/styde.css" />
+<link rel="stylesheet" href="styse.css" />
 <link rel="stylesheet" href="/css/styne.css" />
 <p> Bienvenue: <?=$_SESSION['pseudo']; ?> </p>
 <p> Votre mail : <?=$_SESSION['email']; ?> </p>

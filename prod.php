@@ -19,7 +19,7 @@
 <?php include 'data/database.php'; global $db;?>
 
 <?php
-$q= $db ->query("SELECT * FROM produits");
+$q= $db ->query("SELECT * FROM articles");
 
 while ($donnees = $q->fetch())
 {
@@ -27,10 +27,16 @@ while ($donnees = $q->fetch())
 
 
 <p>
+<div class="container1">
+<ul type="square">
+   <li> La moto : <?php echo $donnees['nom']; ?><br /></li>
+   </li> <div class="box"><img src="<?php echo $donnees['image'];?>"></div> <br /> </li>
+   <li> Le type : <?php echo $donnees['type']; ?> </li>
+   </li> La marque : <?php echo $donnees['marque']; ?> </li>
+   </li> le prix est de : <?php echo $donnees['prix']; ?>euros ! <br /> </li>
+   </li> la consomation <?php echo $donnees['consomation']; ?><br /></li>
+   </li> la description <?php echo $donnees['details']; ?><br /> </li>
 
-    <strong>La moto</strong> : <?php echo $donnees['titre']; ?><br />
-    La marque : <?php echo $donnees['marque']; ?>, voici la photo echo <div class="box"><img src="<?php echo $donnees['image'];?>"></div> <br />
-    le prix est de : <?php echo $donnees['prix']; ?>euros ! <br />la description <?php echo $donnees['description']; ?><br />
 
     <form name="form1" method="get">
     <input type="submit" name="valinc" value="ajoutez le produit">
@@ -38,8 +44,8 @@ while ($donnees = $q->fetch())
     </form>
 
     <?php echo "-------------------------------------------------------------------------"; ?>
- 
-
+</ul>
+</div>
 </p>
 
 

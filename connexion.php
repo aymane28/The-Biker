@@ -4,14 +4,14 @@
 <title>inscription</title>
 </head>
 <body>
-<link rel="stylesheet" href="/css/styde.css" />
+<link rel="stylesheet" href="styse.css" />
 <link rel="stylesheet" href="/css/styne.css" />
 
 <div class="container">
     <div class="row">
         <div class="col-md-offset-5 col-md-4 text-center">
-            <h1 class='text-white'>Connexion</h1>
-              <div class="form-login"></br></br>
+            <h1 class='text-white'>Connexion</h1></br>   
+              <div class="form-login"></br>
                     <form method="post">
                          <input type="text" name="lpseudo" id="lpseudo" class="form-control input-sm chat-input" placeholder="Identifiant" required> <br/></br>
                         <input type="password" name="lpassword" id="lpassword" class="form-control input-sm chat-input" placeholder="Mot de passe" required></br></br>
@@ -21,7 +21,7 @@
                     </form> </br>
                         <div class="item">
                              <h3>Vous n'avez pas de compte?</h3>
-                                <a href="inscription.php" class="test"> <h4> Creer un compte</h4></a>      
+                                <a href="inscription.php" class="test"> <h4> Créer un compte</h4></a>      
                         </div>
                  </div>
         </div>
