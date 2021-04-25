@@ -8,12 +8,12 @@
           <li class="active"><a href="">Acceuil</a></li>
           <li class="deroulant"><a href="">Articles </a>
             <ul class="sous">
-              <li><a href="#">type 1</a></li>
-              <li><a href="#">type 2</a></li>
-              <li><a href="#">type 3</a></li>
-              <li><a href="#">type 4</a></li>
-              <li><a href="#">type 5</a></li>
-             <li><a href="#">type 6</a></li>
+              <li><a href="#">Tout-Terrain</a></li>
+              <li><a href="#">Routière</a></li>
+              <li><a href="#">Roadster</a></li>
+              <li><a href="#">Sportive</a></li>
+              <li><a href="#">Cruiser</a></li>
+             
             </ul>
           </li>
         </ul>

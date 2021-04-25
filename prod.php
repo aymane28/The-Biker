@@ -25,17 +25,31 @@ while ($donnees = $q->fetch())
 {
 ?>
 
+<div class="container1">
+<ul>
+   <li> </li>
+   <li>  </li>
+   <li>  </li>
+   <li>  </li>
+   <li>   </li>
+   <li></li>
+   <li> </li>
+
+
+  
+</ul>
+</div>
 
 <p>
 <div class="container1">
-<ul type="square">
+<ul>
    <li> La moto : <?php echo $donnees['nom']; ?><br /></li>
-   </li> <div class="box"><img src="<?php echo $donnees['image'];?>"></div> <br /> </li>
+   <li> <div class="box"><img src="<?php echo $donnees['image'];?>"></div> <br /> </li>
    <li> Le type : <?php echo $donnees['type']; ?> </li>
-   </li> La marque : <?php echo $donnees['marque']; ?> </li>
-   </li> le prix est de : <?php echo $donnees['prix']; ?>euros ! <br /> </li>
-   </li> la consomation <?php echo $donnees['consomation']; ?><br /></li>
-   </li> la description <?php echo $donnees['details']; ?><br /> </li>
+   <li> La marque : <?php echo $donnees['marque']; ?> </li>
+   <li> le prix est de : <?php echo $donnees['prix']; ?>euros ! <br /> </li>
+   <li> la consomation <?php echo $donnees['consomation']; ?><br /></li>
+   <li> la description <?php echo $donnees['details']; ?><br /> </li>
 
 
     <form name="form1" method="get">

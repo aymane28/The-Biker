@@ -1,0 +1,171 @@
+a {
+    text-decoration: none;
+  }
+  
+  .dr-container{
+    position: relative;
+    width: auto;
+    margin: 46px auto;
+    display: block;
+  }
+
+  .dr-container:before,
+  .dr-container:after {
+      content:"";
+      display:table;
+  }
+  .dr-container:after {
+      clear:both;
+  }
+
+  .dr-container article{
+     display: block;
+    width: 329px;
+    height: 325px;
+    /*background: #FF3300;*/
+    cursor: pointer;
+    float: left;
+    border: 0px solid rgb(35, 111, 146);
+    /* border-radius: 3%; */
+    text-align: center;
+    text-transform: none;
+    margin: 15px;
+    z-index: 1;
+    /* -webkit-backface-visibility: hidden; */
+    box-shadow: 0px 0px 0px 1px rgb(48 156 177), 2px 2px 2px 2px rgb(0 0 0 / 20%);
+    -webkit-transition: opacity 0.2s linear, -webkit-transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    -moz-transition: opacity 0.2s linear, -moz-transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    -o-transition: opacity 0.2s linear, -o-transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    -ms-transition: opacity 0.2s linear, -ms-transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    transition: opacity 0.2s linear, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border-radius: 18px;
+  }
+  .dr-container h3 a{
+      font-size: 16px;
+      font-weight: 400;
+      color: #000;
+      color: rgba(0, 0, 0, 1);
+      text-shadow: 0px 0px 0px rgba(0, 0, 0, 1);
+      opacity: 0.8;
+  }
+ 
+  .dr-container article p{
+      font-family: "lato";
+      font-size: 10px;
+      line-height: 13px;
+      color: #333;
+      color: rgba(51, 51, 51, 1);
+      text-shadow: 0px 0px 0px rgba(51, 51, 51, 1);
+      opacity: 0.8;
+  }
+  .dr-container h3 a,
+  .dr-container article header span,
+  .dr-container article p{
+      -webkit-transition: 
+          opacity 0.2s linear, 
+          text-shadow 0.2s ease-in-out, 
+          color 0.2s ease-in-out;
+      -moz-transition: 
+          opacity 0.2s linear, 
+          text-shadow 0.2s ease-in-out, 
+          color 0.2s ease-in-out;
+      -o-transition: 
+          opacity 0.2s linear, 
+          text-shadow 0.2s ease-in-out, 
+          color 0.2s ease-in-out;
+      -ms-transition: 
+          opacity 0.2s linear, 
+          text-shadow 0.2s ease-in-out, 
+          color 0.2s ease-in-out;
+      transition: 
+          opacity 0.2s linear, 
+          text-shadow 0.2s ease-in-out, 
+          color 0.2s ease-in-out;
+  }
+  
+  .dr-container article.blur{
+      box-shadow: 0px 0px 6px 4px rgba(255,204,102,1);
+      -webkit-transform: scale(0.9);
+      -moz-transform: scale(0.9);
+      -o-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      transform: scale(0.9);
+      opacity: 0.7;
+  }
+  .dr-container article.blur h3 a{
+      text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.9);
+      color: rgba(0, 0, 0, 0);
+      opacity: 0.5;
+  }
+  .dr-container article.blur header span{
+      text-shadow: 0px 0px 4px rgba(255, 210, 82, 0.9);
+      color: rgba(255, 210, 82, 0);
+      opacity: 0.5;
+  }
+  .dr-container article.blur  p{
+      text-shadow: 0px 0px 4px rgba(51, 51, 51, 0.9);
+      color: rgba(51, 51, 51, 0);
+      opacity: 0.5;
+  }
+  
+  .dr-container article.active{
+      -webkit-transform: scale(1.05);
+      -moz-transform: scale(1.05);
+      -o-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      transform: scale(1.05);
+      box-shadow: 
+          0px 0px 0px 1px rgba(255,200,102,1), 
+          1px 11px 15px 10px rgba(0,0,0,0.4);
+      z-index: 100;	
+      opacity: 1;
+  }
+  .dr-container article.active h3 a,
+  .dr-container article.active header span,
+  .dr-container article.active p{
+      opacity: 1;
+  }
+  
+  .containerrr{
+    /*border-style: ridge;*/
+    width: 635px;
+    display: inline-flex;
+  }
+
+.imgg{
+    width: 355px;
+    position: relative;
+    margin-top: -47px;
+    /* padding-top: 0px; */
+    margin-right: 54px;
+    margin-left: -14px;
+  }
+
+  .header-article{
+    display: block;
+    /* margin-top: 70px; */
+    padding: 10px 0;
+    box-shadow: 0 7px 16px -2px rgb(0 0 0 / 30%);
+    /*background: #e12121;*/
+    background: linear-gradient(to bottom, #ffffff 0%,#f3f3f3 100%);  
+  }
+
+  .cont{
+    position: relative;
+    width: auto;
+    margin-top: auto;
+    padding-top: 10px;
+    margin-bottom: 47px;
+    background: rgb(94 165 165);
+    /* display: block;*/
+  }
+
+  .cont2{
+    position: relative;
+    width: auto;
+    margin-top: 0px;
+    padding-top: 63px;
+    /* margin-bottom: auto; */
+    background: rgb(94 165 165);
+
+  }
