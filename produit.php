@@ -7,16 +7,39 @@
 <title>Page Title</title>
 </head>
 <body>
-<link rel="stylesheet" href="styse.css" />
+<link rel="stylesheet" href="css/style.css" />
 
+<p> variable   :<?php echo $_GET['pseudo']; ?> </p>
 <p> Bienvenue: <?=$_SESSION['pseudo']; ?> </p>
 <p> Votre mail : <?=$_SESSION['email']; ?> </p>
 
-
-<pre>les produits </pre>
-
+<div class="label1">
+<h1>les produits </h1>
+</div>
 
 <?php include 'data/database.php'; global $db;?>
+
+<?php
+//print_r($_GET);
+if(isset($_GET["current_value"]))
+{
+if(isset($_GET["valinc"]))
+{
+$current_value=$_GET["current_value"]+1;
+}else{
+$current_value=$_GET["current_value"]-1;
+}
+}else{
+$current_value=0;
+}
+?>
+
+
+
+<form name="form1" method="get">
+    <div class="label">
+    <input type="text" id="name" name="current_value" value="<?php echo $current_value; ?>"/>
+    </div>
 
 <?php
 $q= $db ->query("SELECT * FROM produits");
@@ -25,9 +48,7 @@ while ($donnees = $q->fetch())
 {
 ?>
 
-
 <p>
-
     <strong>La moto</strong> : <?php echo $donnees['titre']; ?><br />
     La marque : <?php echo $donnees['marque']; ?>, voici la photo echo <div class="box"><img src="<?php echo $donnees['image'];?>"></div> <br />
     le prix est de : <?php echo $donnees['prix']; ?>euros ! <br />la description <?php echo $donnees['description']; ?><br />
@@ -38,11 +59,7 @@ while ($donnees = $q->fetch())
     </form>
 
     <?php echo "-------------------------------------------------------------------------"; ?>
- 
-
 </p>
-
-
 
 <?php
 }
@@ -70,6 +87,33 @@ if(isset($_POST['payer'])){
     ob_end_flush();
                 ?>
 
+<?php
+    if(isset($_POST['valinc'])){
+        extract($_POST);
+        $q= $db ->query("SELECT * FROM produits where titre='moto1'");
 
+        while ($donnees = $q->fetch())
+{
+    ?>
+
+<p>
+    <strong>La moto</strong> : <?php echo $donnees['titre']; ?><br />
+    La marque : <?php echo $donnees['marque']; ?>, voici la photo echo <img src="<?php echo $donnees['image'];?>">  <br />
+    le prix est de : <?php echo $donnees['prix']; ?>euros ! <br />la description <?php echo $donnees['description']; ?><br />
+</p>
+<?php echo "vous avez choisi cette moto !"; ?>
+
+<form method="post">
+
+</form>
+
+
+
+
+<?php
+}
+}
+$q->closeCursor();
+?>
 </body>
 </html>

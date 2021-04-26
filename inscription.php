@@ -4,8 +4,8 @@
 <title>Inscription</title>
 </head>
 <body> 
-<link rel="stylesheet" href="styse.css" />
-<link rel="stylesheet" href="/css/styne.css" />
+<link rel="stylesheet" href="/css/styse.css" />
+<link rel="stylesheet" href="/css/background.css" />
 
 <div class="container">
     <div class="row">

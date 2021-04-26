@@ -5,8 +5,8 @@
 </head>
 <body>
 
-<link rel="stylesheet" href="styse.css" />
-<link rel="stylesheet" href="/css/styne.css" />
+<link rel="stylesheet" href="/css/styse.css" />
+<link rel="stylesheet" href="/css/background.css" />
 
 <?php include 'data/database.php';global $db; global $dr;?>
 

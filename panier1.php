@@ -1,69 +1,101 @@
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <body>
-		<body
+?>
+<HTML>
+<HEAD>
+<TITLE>Simple PHP Shopping Cart</TITLE>
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="/css/styp.css" />
+<link rel="stylesheet" href="/css/styme.css" />
+<link rel="stylesheet" href="/css/style.css" />
+</HEAD>
+<BODY>
+<body
     background="/img/blue.jpg"></bodybackground>
-    <link rel="stylesheet" href="/css/stype.css" />
-            <link rel="stylesheet" href="jesuis.css" />
-            <link rel="stylesheet" href="/css/styde.css" />
-		
-			<?php include 'data/database.php'; global $db;?>			
-<?php
+	<?php
 include("header.php");?>
+<div id="shopping-cart">
+<div class="txt-heading">Panier</div>
 
 
-
+<a id="btnEmpty" href="produits.php?action=empty">Vider le panier</a>
 <?php
+if(isset($_SESSION["cart_item"])){
+    $total_quantity = 0;
+    $total_prix = 0;
+?>	
+<table class="tbl-cart" cellpadding="10" cellspacing="1">
+<tbody>
+<tr>
+<th style="text-align:left;">Nom</th>
+<th style="text-align:left;">Type</th>
+<th style="text-align:right;" width="5%">Quantité</th>
+<th style="text-align:right;" width="10%">Prix unitaire</th>
+<th style="text-align:right;" width="10%">Prix</th>
+<th style="text-align:center;" width="5%">Vider</th>
+</tr>	
+<?php		
+    foreach ($_SESSION["cart_item"] as $item){
+        $item_prix = $item["quantity"]*$item["prix"];
+		?>
+				<tr>
+				<td><img src="<?php echo $item["image"]; ?>" class="cart-item-image" /><?php echo $item["name"]; ?></td>
+				<td><?php echo $item["type"]; ?></td>
+				<td style="text-align:right;"><?php echo $item["quantity"]; ?></td>
+				<td  style="text-align:right;"><?php echo $item["prix"]." €"; ?></td>
+				<td  style="text-align:right;"><?php echo number_format($item_prix,2)." €"; ?></td>
+				<td style="text-align:center;"><a href="produits.php?action=remove&type=<?php echo $item["type"]; ?>" class="btnRemoveAction"><img src="icon-delete.png" alt="Remove Item" /></a></td>
+				</tr>
+				<?php
+				$total_quantity += $item["quantity"];
+				$total_prix += ($item["prix"]*$item["quantity"]);
+		}
+		?>
 
-$q = $db -> query("SELECT * FROM articles");
-
-while ($donnees = $q->fetch())
-{
-$valeur_test= $donnees['prix'];
+<tr>
+<td colspan="2" align="right">Total:</td>
+<td align="right"><?php echo $total_quantity; ?></td>
+<td align="right" colspan="2"><strong><?php echo number_format($total_prix, 2)." €"; ?></strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>		
+  <?php
+} else {
+?>
+<div class="no-records">Votre panier est vide</div>
+<?php 
 }
-
 ?>
+</div>
 
-
-
-
-
-
-<?php
-$q= $db ->query("SELECT * FROM articles");
-
-while ($donnees = $q->fetch())
-{
-?>
-
-
-<div class="containerrr">	
-		<section class="dr-container" id="dr-container">
-			<article>
-            <div class="cont">
-					<h3><a target="_blank" href="http://"><?php echo $donnees['nom']; ?></a></h3>
+<div id="product-grid">
+	<div class="txt-heading">Produits</div>
+	<?php
+	$product_array = $db_handle->runQuery("SELECT * FROM articles ORDER BY id ASC");
+	if (!empty($product_array)) { 
+		foreach($product_array as $key=>$value){
+	?>
+		<div class="product-item">
+		<div class="cont">
+		<div class="product-title"><?php echo $product_array[$key]["name"]; ?></div>
 						<span>...</span>
             </div>
-					 <img class="imgg" src="<?php echo $donnees['image'];?>">
-                     <input type="text" name="current_value"class="form-controle input-sm chat-input" value="<?php echo $donnees['prix'] ?>"/>
-                     <input type="submit" href="panier.php" name="valinc" class="btn-danger1" value="Ajoutez le produit">
-                     <div class="cont2">
-						<span>...</span>
-                        </div>
-                        
-				</article>  
-				</div> 
-			</section>
-            
-       
-		<?php
-        
-}
+			<form method="post" action="produits.php?action=add&name=<?php echo $product_array[$key]["name"]; ?>">
+			<div class="product-image"><img class="imgg" src="<?php echo $product_array[$key]["image"]; ?>"></div>
+			<div class="product-tile-footer">
+			<a href="Ensavoirplus.php" class="ensavoirplus"> <h4> En savoir plus sur le produit</h4></a>  			</div>
+			<div class="cart-action"><input type="text" class="product-quantity" name="quantity" value="1" size="2" /><input type="submit" value="Ajouter au panier" class="btnAddAction" /></div>
+			<div class="product-prix"><?php echo $product_array[$key]["prix"]." €"; ?></div>
+			</form>
+		</div>
+	<?php
+		}
+	}
+	?>
+</div>
+
+<?php
+
+include("footer.php");
 ?>
-
-
-    </body>
-</html>
+</BODY>
+</HTML>

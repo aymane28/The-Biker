@@ -6,7 +6,7 @@
     </head> <body>
     <body
     background="/img/blue.jpg"></bodybackground>
-    <link rel="stylesheet" href="/css/stype.css" />
+    <link rel="stylesheet" href="/css/styme.css" />
 
 <?php
 

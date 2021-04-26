@@ -43,11 +43,14 @@ switch($_GET["action"]) {
 }
 }
 ?>
+
 <HTML>
 <HEAD>
-<TITLE>Simple PHP Shopping Cart</TITLE>
+<TITLE>Produits</TITLE>
 <link href="style.css" type="text/css" rel="stylesheet" />
 <link rel="stylesheet" href="/css/stype.css" />
+<link rel="stylesheet" href="/css/styme.css" />
+<link rel="stylesheet" href="/css/style.css" />
 </HEAD>
 <BODY>
 <body
@@ -56,6 +59,9 @@ switch($_GET["action"]) {
 include("header.php");?>
 <div id="shopping-cart">
 <div class="txt-heading">Panier</div>
+
+
+
 
 
 <a id="btnEmpty" href="produits.php?action=empty">Vider le panier</a>
@@ -74,6 +80,10 @@ if(isset($_SESSION["cart_item"])){
 <th style="text-align:right;" width="10%">Prix</th>
 <th style="text-align:center;" width="5%">Vider</th>
 </tr>	
+
+
+
+
 <?php		
     foreach ($_SESSION["cart_item"] as $item){
         $item_prix = $item["quantity"]*$item["prix"];
@@ -92,6 +102,15 @@ if(isset($_SESSION["cart_item"])){
 		}
 		?>
 
+<form action="panier.php" method="get" >
+	<div class="hidden">
+	<input name ="price" value="<?php echo number_format($total_prix, 2) ?>">
+	<input name ="quantité" value="<?php echo $total_quantity; ?>">
+	<input name ="image" value="<?php echo $item["image"];  ?>">
+	</div>
+	<input type="submit" name="envoi" class="sub1" value="Vérifiez votre panier" />
+</form>
+
 <tr>
 <td colspan="2" align="right">Total:</td>
 <td align="right"><?php echo $total_quantity; ?></td>
@@ -108,6 +127,11 @@ if(isset($_SESSION["cart_item"])){
 }
 ?>
 </div>
+
+
+
+
+
 
 <div id="product-grid">
 	<div class="txt-heading">Produits</div>
@@ -134,5 +158,10 @@ if(isset($_SESSION["cart_item"])){
 	}
 	?>
 </div>
+
+<?php
+
+include("footer.php");
+?>
 </BODY>
 </HTML>

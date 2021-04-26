@@ -5,10 +5,11 @@
 <title>Carte</title>
 </head>
 <body>
-<link rel="stylesheet" href="styse.css" />
-<link rel="stylesheet" href="/css/styne.css" />
-<p> Bienvenue: <?=$_SESSION['pseudo']; ?> </p>
-<p> Votre mail : <?=$_SESSION['email']; ?> </p>
+<link rel="stylesheet" href="/css/styse.css" />
+<link rel="stylesheet" href="/css/background.css" />
+
+<h7> Salut: <?=$_SESSION['pseudo']; ?> </h7>
+<p> Votre mail est : <?=$_SESSION['email']; ?> </p>
 
 <div class="container">
     <div class="row">
@@ -60,12 +61,12 @@
             'num' =>$_POST['num'],
             'date' => $_POST['date'],
             'crypto' =>$_POST['crypto']
-            ]);
-            echo "la carte a été accepté";
-            echo "votre carte avec l'identifiant :". $_SESSION['nom']=$_POST['nom'] ."a été enregistrée";
+            ]);?>
+            <div class="sentence6" > <?php echo "La carte a été accepté"; ?> </div>
+            <div class="sentence8" > <?php echo "Votre carte avec l'identifiant :". $_SESSION['nom']=$_POST['nom'] ." a été enregistrée."; ?> </div><?php
              // header("Location: panier.php")
             }else{ ?>
-                <div class="sentence" > <?php echo "Votre identifiant n'est pas bon ou est déjà lié à une autre carte";} ?> </div>
+                <div class="sentence7" > <?php echo "Votre identifiant n'est pas bon, ou est déjà lié à une autre carte.";} ?> </div>
             <?php
         }     
     }

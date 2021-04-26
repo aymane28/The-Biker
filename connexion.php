@@ -4,8 +4,9 @@
 <title>inscription</title>
 </head>
 <body>
-<link rel="stylesheet" href="styse.css" />
-<link rel="stylesheet" href="/css/styne.css" />
+    
+<link rel="stylesheet" href="/css/styse.css" />
+<link rel="stylesheet" href="/css/background.css" />
 
 <div class="container">
     <div class="row">
@@ -46,22 +47,21 @@ if(isset($_POST['fronlogin'])){
             $hashpassword = $result['password'];
             if(password_verify($lpassword, $result['password'])){
                 ?>
-                <div class="sentence" > <?php echo "le mot de passe est bon"; ?></div>
+                <div class="sentence8" > <?php echo "Le mot de passe est bon !"; ?></div>
 
                 <?php
-              echo "vous etes connecté ". $_SESSION['pseudo']=$result['pseudo'];
-              echo "vous etes connecté ". $_SESSION['email']=$result['email'];
+             
               
-                header("Location: produit.php");
+                header("Location: produits.php");
                 exit();
             }else{ ?>
-                <div class="sentence" > <?php   echo "le mot de passe n'est pas correcte";}?></div>
+                <div class="sentence9" > <?php   echo "Le mot de passe n'est pas correcte.";}?></div>
            <?php     
         }else{ ?>
-                <div class="sentence" > <?php   echo "le compte portant l'dentifiant' ".$_POST['lpseudo']."n'existe pas";}?></div>
+                <div class=sentence7 > <?php   echo "Le compte portant l'dentifiant: ".$_POST['lpseudo']." n'existe pas";}?></div>
             <?php
             }else{ ?>
-                <div class="sentence" > <?php  echo " veuillez compléter l'ensemble des champs"; }?></div>
+                <div class="sentence" > <?php  echo " Veuillez compléter l'ensemble des champs !"; }?></div>
                 <?php
             }
 ?>
