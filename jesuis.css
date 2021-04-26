@@ -19,10 +19,10 @@ a {
   }
 
   .dr-container article{
-     display: block;
-    width: 329px;
-    height: 325px;
-    /*background: #FF3300;*/
+    display: block;
+    width: 454px;
+    height: 462px;
+    /* background: #FF3300; */
     cursor: pointer;
     float: left;
     border: 0px solid rgb(35, 111, 146);

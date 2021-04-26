@@ -135,6 +135,16 @@
   margin-right: 31px;
   display: block;
 }
+
+.form-controle{
+  background: transparent!important;
+  color: rgb(206, 22, 22)!important;
+  font-size: 17px!important;
+  width: 100px;
+  float: right;
+  margin-right: 31px;
+  display: block;
+}
 .item{
   color:white! 
 }

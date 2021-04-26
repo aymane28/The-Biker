@@ -4,6 +4,7 @@
     define('DB_NAME', 'sitetest');
     define('USER', 'root');
     define('PASS', '');
+    
 
     try{
         $db=new PDO("mysql:host=".HOST.";dbname=" .DB_NAME, USER, PASS);
@@ -12,5 +13,6 @@
     }catch(PDOException $erreur){
         echo $erreur;
     }
+
 
 ?>
