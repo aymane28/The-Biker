@@ -1,7 +1,7 @@
 <?php
 
     define('HOST', 'localhost');
-    define('DB_NAME', 'sitetest');
+    define('DB_NAME', 'siteweb');
     define('USER', 'root');
     define('PASS', '');
     

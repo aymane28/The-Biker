@@ -376,15 +376,7 @@ footer {
 
 /*Reset CSS*/
 
-.sous{
-    display: none;
-    box-shadow: 0px 1px 2px rgb(72, 209, 173);
-    background-color: rgb(223, 242, 236);
-    position: absolute;
-    width: 100%;
-    block-size: 7%;
-    z-index: 1000;
-}
+.
 
 nav > ul li:hover .sous{
     display: block;
@@ -403,7 +395,7 @@ nav > ul li:hover .sous{
 
 .sous a:hover{
     border-bottom: none;
-    background-color: rgb(123, 223, 196);
+    background-color: rgb(57, 155, 185);
 }
 
 .deroulant > a::after{
