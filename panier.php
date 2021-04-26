@@ -43,7 +43,7 @@ if(isset($_GET["current_value"]))
             <div class="form-login2">
                 <form method="post">
                     <div class="total" >
-                        <p> Prix à payer </p><input type="text" class="form-control input-sm chat-input"value=" <?php
+                        <p> Prix à payer </p><input type="text" class="form1-control input-sm chat-input"value=" <?php
 echo $price = isset($_GET['price']) ? $_GET['price'] : NULL;
 ?>">
                     </div></br></br>

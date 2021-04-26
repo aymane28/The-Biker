@@ -127,7 +127,7 @@
 
 .form-control2{
   background: transparent!important;
-  color: rgb(206, 22, 22)!important;
+  color: rgb(243, 237, 237)!important;
   font-size: 17px!important;
   width: 150px;
   float: right;
@@ -137,13 +137,21 @@
 
 .form-controle{
   background: transparent!important;
-  color: rgb(206, 22, 22)!important;
+  color: rgb(237, 230, 230)!important;
   font-size: 17px!important;
   width: 100px;
   float: right;
   margin-right: 31px;
   display: block;
 }
+
+.form1-control{
+  background:transparent!important;
+  color:rgb(196, 77, 77)!important;
+  font-size: 16px!important;
+  border-radius: 10px;
+}
+
 .item{
   color:white! 
 }
@@ -191,10 +199,6 @@ h3{
   padding: -7px;
 }
 
-
-.form-control {
-    border-radius: 10px;
-}
 
 .text-white{
     color: white!important;
