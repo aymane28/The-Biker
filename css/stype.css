@@ -37,7 +37,7 @@ header {
 
 .list{
   background-color: rgb(124, 202, 78);
-  
+  display: block;
   
 }
   
@@ -420,4 +420,22 @@ nav > ul li:hover .sous{
 .conteneur{
   margin: 5px 20px;
   height: 1500px;
+}
+
+.btnAdd4Action{
+  background-color: #17967f;
+    border: #178ca7 1px solid;
+    padding: 5px 10px;
+    color: #ffffff;
+    box-shadow:rgb(0 0 0 / 30%);
+    float: left;
+    text-decoration: none;
+    border-radius: 3px;
+    margin: 0px 0px;
+    cursor: pointer;
+}
+
+.txt-heading1{
+  background-color: slateblue;
+  font-size: 20px;
 }

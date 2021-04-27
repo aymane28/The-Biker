@@ -56,9 +56,11 @@ if(isset($_POST['fronlogin'])){
                 ?>
                 <div class="sentence8" > <?php echo "Le mot de passe est bon !"; ?></div>
 
-                <p> votre pseudo : <?=$_SESSION['pseudo'] = $result['pseudo']; ?> </p>
+                <p> votre pseudo : <?=$_SESSION['email'] = $result['email']; ?> </p>
+                <p> votre pseudo : <?=$_SESSION['id'] = $result['id']; ?> </p>
 
-              <?php  header("Location: produits.php");
+
+              <?php  header("Location: produits.php/".$result['id']."");
                 exit(); ?>
                 <?php
              

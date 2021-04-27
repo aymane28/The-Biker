@@ -1,4 +1,8 @@
-<?php session_start();?>
+<?php
+session_start();
+require_once("dbcontroller.php");
+$db_handle = new DBController();?>
+
 <!DOCTYPE html>
 <html>
     <head>

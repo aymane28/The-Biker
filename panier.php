@@ -1,4 +1,8 @@
-<?php session_start();?>
+<?php
+session_start();
+require_once("dbcontroller.php");
+$db_handle = new DBController();?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +18,8 @@ background="/img/blue.jpg"></bodybackground>
 include("header.php");
 ?>
 
-<?php include 'data/database.php';global $db;?>
+<?php include 'data/database.php'; ?>
+
 <a href="modifications.php">
 <input type="submit" name="envoi" class="sub1" value="Modifier ses informations" /></a>
 

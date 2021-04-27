@@ -132,38 +132,5 @@ if(isset($_SESSION["cart_item"])){
 ?>
 </div>
 
-
-
-
-<div id="product-grid">
-	<div class="txt-heading">Produits</div>
-	<?php
-	$product_array = $db_handle->runQuery("SELECT * FROM articles ORDER BY id ASC");
-	if (!empty($product_array)) { 
-		foreach($product_array as $key=>$value){
-	?>
-		<div class="product-item">
-		<div class="cont">
-		<div class="product-title"><?php echo $product_array[$key]["name"]; ?></div>
-						<span>...</span>
-            </div>
-			<form method="post" action="produits.php?action=add&name=<?php echo $product_array[$key]["name"]; ?>">
-			<div class="product-image"><img class="imgg" src="<?php echo $product_array[$key]["image"]; ?>"></div>
-			<div class="product-tile-footer">
-			<a href="Ensavoirplus.php" class="ensavoirplus"> <h4> En savoir plus sur le produit</h4></a>  			</div>
-			<div class="cart-action"><input type="text" class="product-quantity" name="quantity" value="1" size="2" /><input type="submit" value="Ajouter au panier" class="btnAddAction" /></div>
-			<div class="product-prix"><?php echo $product_array[$key]["prix"]." €"; ?></div>
-			</form>
-		</div>
-	<?php
-		}
-	}
-	?>
-</div>
-
-<?php
-
-include("footer.php");
-?>
 </BODY>
-</HTML>
+</html>

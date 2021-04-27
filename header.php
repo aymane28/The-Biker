@@ -9,8 +9,8 @@
           <li class="deroulant"><a href="">Articles </a>
             <ul class="sous">
 
-            <?php
-           global $db_handle;
+        
+          <?php
 	$product_array = $db_handle->runQuery("SELECT DISTINCT type FROM articles ORDER BY id ASC");
 	if (!empty($product_array)) { 
 		foreach($product_array as $key=>$value){
@@ -18,7 +18,7 @@
 
   <form method="get" action="articlecat.php">
       <div class="list">
-  <input type="submit" name="test" value="<?php echo $product_array[$key]["type"]; ?>" class="btnAdd4Action" />
+  <li><input type="submit" name="test" value="<?php echo $product_array[$key]["type"]; ?>" class="btnAdd4Action" /></li>
       </div>
       </form>
 	<?php
