@@ -8,8 +8,8 @@
 <link rel="stylesheet" href="/css/styse.css" />
 <link rel="stylesheet" href="/css/background.css" />
 
-<h7> Salut: <?=$_SESSION['pseudo']; ?> </h7>
-<p> Votre mail est : <?=$_SESSION['email']; ?> </p>
+
+
 
 <div class="container">
     <div class="row">
@@ -62,7 +62,7 @@
             'date' => $_POST['date'],
             'crypto' =>$_POST['crypto']
             ]);?>
-            <div class="sentence6" > <?php echo "La carte a été accepté"; ?> </div>
+            <div class="sentence6" > <?php echo "La carte a été accepté!"; ?> </div>
             <div class="sentence8" > <?php echo "Votre carte avec l'identifiant :". $_SESSION['nom']=$_POST['nom'] ." a été enregistrée."; ?> </div><?php
              // header("Location: panier.php")
             }else{ ?>

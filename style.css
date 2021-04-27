@@ -172,6 +172,16 @@ body {
         border-radius: 3px;
         margin: 11px 13px;}
 
+    .sub2{
+        display: block;
+        margin: 12px 0 0 45px;
+        padding-bottom: 12px;
+        font: 12px 'Lato';
+        font-weight: 700;
+        color: #444;
+        text-transform: uppercase;
+    }    
+
         .hidden{
             background-color: none;
             border: #ffffff 1px solid;
