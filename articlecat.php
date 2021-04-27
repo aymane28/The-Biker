@@ -44,6 +44,8 @@ switch($_GET["action"]) {
 }
 ?>
 
+
+
 <HTML>
 <HEAD>
 <TITLE>Produits</TITLE>
@@ -54,84 +56,13 @@ switch($_GET["action"]) {
 </HEAD>
 <BODY>
 <body
-    background="/img/blue.jpg"></bodybackground>
-	
-	<?php
-include("header.php");?>
-<div id="shopping-cart">
-<div class="txt-heading">Panier</div>
 
 
 
 
 
-<a id="btnEmpty" href="produits.php?action=empty">Vider le panier</a>
-<?php
-if(isset($_SESSION["cart_item"])){
-    $total_quantity = 0;
-    $total_prix = 0;
-?>	
-<table class="tbl-cart" cellpadding="10" cellspacing="1">
-<tbody>
-<tr>
-<th style="text-align:left;">Nom</th>
-<th style="text-align:left;">Type</th>
-<th style="text-align:right;" width="5%">Quantité</th>
-<th style="text-align:right;" width="10%">Prix unitaire</th>
-<th style="text-align:right;" width="10%">Prix</th>
-<th style="text-align:center;" width="5%">Vider</th>
-</tr>	
 
 
-
-
-<?php		
-    foreach ($_SESSION["cart_item"] as $item){
-        $item_prix = $item["quantity"]*$item["prix"];
-		?>
-				<tr>
-				<td><img src="<?php echo $item["image"]; ?>" class="cart-item-image" /><?php echo $item["name"]; ?></td>
-				<td><?php echo $item["type"]; ?></td>
-				<td style="text-align:right;"><?php echo $item["quantity"]; ?></td>
-				<td  style="text-align:right;"><?php echo $item["prix"]." €"; ?></td>
-				<td  style="text-align:right;"><?php echo $item_prix." €"; ?></td>
-				<td style="text-align:center;"><a href="produits.php?action=remove&type=<?php echo $item["type"]; ?>" class="btnRemoveAction"><img src="/img/icon-delete.png" alt="Remove Item" /></a></td>
-				</tr>
-				<?php
-				$total_quantity += $item["quantity"];
-				$total_prix += ($item["prix"]*$item["quantity"]);
-		}
-		?>
-
-<form action="panier.php" method="get" >
-	<div class="hidden">
-	<input name ="price" value="<?php echo $total_prix." €" ?>">
-	<input name ="quantité" value="<?php echo $total_quantity; ?>">
-	<input name ="image" value="<?php echo $item["image"];  ?>">
-	<input name ="name" value="<?php echo $item["name"];  ?>">
-	</div>
-	<input type="submit" name="envoi" class="sub1" value="Vérifiez votre panier" />
-	<input type="submit" name="envoi" class="sub0" value="panier" />
-	<img type="submit" class="imge" src="/img/panier.png"/>
-	
-</form>
-
-<tr>
-<td colspan="2" align="right">Total:</td>
-<td align="right"><?php echo $total_quantity; ?></td>
-<td align="right" colspan="2"><strong><?php echo $total_prix." €"; ?></strong></td>
-<td></td>
-</tr>
-</tbody>
-</table>		
-  <?php
-} else {
-?>
-<div class="no-records">Votre panier est vide</div>
-<?php 
-}
-?>
-</div>
 
 
 
@@ -141,7 +72,7 @@ if(isset($_SESSION["cart_item"])){
 <div id="product-grid">
 	<div class="txt-heading">Produits</div>
 	<?php
-	$product_array = $db_handle->runQuery("SELECT * FROM articles ORDER BY id ASC");
+	$product_array = $db_handle->runQuery("SELECT * FROM articles where marque='" . $_GET["name"] . "' ORDER BY id ASC");
 	if (!empty($product_array)) { 
 		foreach($product_array as $key=>$value){
 	?>
