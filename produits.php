@@ -111,7 +111,9 @@ if(isset($_SESSION["cart_item"])){
 	<input name ="name" value="<?php echo $item["name"];  ?>">
 	</div>
 	<!--<input type="submit" name="envoi" class="sub1" value="Vérifiez votre panier" />-->
-	<input type="submit" name="envoi" class="sub2" value="Vérifiez votre panier" />
+	<input type="submit" name="envoi" class="sub0" value="panier" />
+	<img type="submit" class="imge" src="/img/panier.png"/>
+	
 </form>
 
 <tr>

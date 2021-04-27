@@ -15,7 +15,8 @@ include("header.php");
 ?>
 
 <?php include 'data/database.php';global $db;?>
-
+<a href="modifications.php">
+<input type="submit" name="envoi" class="sub1" value="Modifier ses informations" /></a>
 
 <?php
 //print_r($_GET);

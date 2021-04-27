@@ -21,11 +21,11 @@
 
       <nav class="responsive2">
         <ul>
-           <li class="responsive2"><a href="panier.php">Panier</a> </li>
+           <li class="responsive2"><a href="">Panier</a> </li>
 
           <li><a href="connexion.php">Compte</a></li>
         </ul>
 
-           <a href="panier.php"> <img class="img4" src="/img/panier.png"/></a>       
+           <a href=""> <img class="img4" src="/img/panier.png"/></a>       
       </nav>
 </header>

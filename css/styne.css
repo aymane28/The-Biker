@@ -104,6 +104,7 @@ nav ul li.active a {
       width: 10%;
       bottom: 10%;
       margin: -4px;
+      cursor: default;
   }
 
   /*image acceuil*/
@@ -144,6 +145,7 @@ nav ul li.active a {
 /*button en savoir plus*/
 .hero .button {
     margin-left: 40px;
+    cursor: pointer;
 }
 
 .product {
@@ -240,7 +242,7 @@ footer {
     float: none;
     margin: 12px 0;
     padding: 5px 30px;
-    border-right: 1px solid #b5b5b5;
+    /*border-right: 1px solid #b5b5b5;*/
     font: 14px 'Lato';
     font-weight: 900;
     color: #333;
@@ -390,4 +392,27 @@ nav > ul li:hover .sous{
 .conteneur{
   margin: 5px 20px;
   height: 1500px;
+}
+
+.imge{
+  width: 30px;
+  bottom: 11%;
+  margin: -108px;
+  float: right;
+  background: white;
+  margin-top: -105px;
+ 
+}
+
+.sub1{
+  background-color: #cbceea;
+  border: #100075 1px solid;
+  padding: 5px 10px;
+  color: #112898;
+  float: right;
+  text-decoration: inherit;
+  border-radius: 6px;
+  font-family: sans-serif;
+  margin: 53px 25px;
+  cursor: pointer;
 }

@@ -36,6 +36,7 @@ body {
 	text-decoration: none;
 	border-radius: 3px;
 	margin: 10px 0px;
+    cursor: pointer;
 }
 
 .btnAddAction {
@@ -172,6 +173,20 @@ body {
         border-radius: 3px;
         margin: 11px 13px;}
 
+        .sub0{
+            background-color: #ffffff;
+            border: #ffffff 1px solid;
+            padding: 17px 16px;
+            font: 12px 'Lato';
+            float: right;
+            font-weight: 700;
+            color: #444;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 3px;
+            margin: -110px -70px;
+            cursor: pointer;
+        }
     .sub2{
         display: block;
         margin: 12px 0 0 45px;

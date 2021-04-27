@@ -226,6 +226,7 @@
     padding: revert;
     border-radius: 16px;
     font-size: 15px;
+    cursor: pointer;
   }
   
   .btn-danger1{
@@ -235,6 +236,7 @@
       padding: revert;
       border-radius: 16px;
       font-size: 15px;
+      cursor: pointer;
     }
   
     .btn-danger2{
@@ -244,6 +246,7 @@
       padding: revert;
       border-radius: 16px;
       font-size: 15px;
+      cursor: pointer;
     }
 
     .btn-danger3{
@@ -255,6 +258,7 @@
       margin-left: 133px;
       border-radius: 16px;
       font-size: 15px;  
+      cursor: pointer;
     }
     
     .btn-danger4{
@@ -268,6 +272,7 @@
       border-radius: 13px;
       margin-left: unset;
       font-size: 15px;
+      cursor: pointer;
   }
     
     
