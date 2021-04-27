@@ -8,12 +8,30 @@
           <li class="active"><a href="acceuil.php">Acceuil</a></li>
           <li class="deroulant"><a href="">Articles </a>
             <ul class="sous">
-              <li><a href="produits.php">Tout-Terrain</a></li>
-              <li><a href="produits.php">Routière</a></li>
-              <li><a href="produits.php">Roadster</a></li>
-              <li><a href="produits.php">Sportive</a></li>
-              <li><a href="produits.php">Cruiser</a></li>
-             
+
+            <?php
+           global $db_handle;
+	$product_array = $db_handle->runQuery("SELECT DISTINCT type FROM articles ORDER BY id ASC");
+	if (!empty($product_array)) { 
+		foreach($product_array as $key=>$value){
+	?>
+
+  <form method="get" action="articlecat.php">
+      <div class="list">
+  <input type="submit" name="test" value="<?php echo $product_array[$key]["type"]; ?>" class="btnAdd4Action" />
+      </div>
+      </form>
+	<?php
+
+		}}
+	
+	?>
+  <!--
+              <li><a href="articlecat.php">Tout-Terrain </a></li>	
+              <li><a href="articlecat.php">Routière</a></li>
+              <li><a href="articlecat.php">Roadster</a></li>
+              <li><a href="articlecat.php">Sportive</a></li>
+              <li><a href="articlecat.php">Cruiser</a></li>-->
             </ul>
           </li>
         </ul>
@@ -29,3 +47,4 @@
            <a href=""> <img class="img4" src="/img/panier.png"/></a>       
       </nav>
 </header>
+

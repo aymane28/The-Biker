@@ -56,23 +56,16 @@ switch($_GET["action"]) {
 </HEAD>
 <BODY>
 <body
-
-
-
-
-
-
-
-
-
-
+    background="/img/blue.jpg"></bodybackground>
+	
+<?php echo $_GET["test"]; ?>
 
 
 
 <div id="product-grid">
 	<div class="txt-heading">Produits</div>
 	<?php
-	$product_array = $db_handle->runQuery("SELECT * FROM articles where marque='" . $_GET["name"] . "' ORDER BY id ASC");
+	$product_array = $db_handle->runQuery("SELECT * FROM articles where type='" . $_GET["test"] . "' ORDER BY id ASC");
 	if (!empty($product_array)) { 
 		foreach($product_array as $key=>$value){
 	?>

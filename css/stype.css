@@ -34,6 +34,12 @@ header {
     background: #ffffff;
     background: linear-gradient(to bottom, #ffffff 0%,#f3f3f3 100%);
 }
+
+.list{
+  background-color: rgb(124, 202, 78);
+  
+  
+}
   
 #logo a {
     float: left;
