@@ -52,30 +52,34 @@
 }
 
 .form-login2{
-    background-color: rgba(0,0,0,0.55);
-    padding-top: 10px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 15px;
-    border-color:#d2d2d2;
-    border-width: 5px;
-    color:rgb(213, 176, 28);
-    box-shadow:0 1px 0 #706565;
-    text-align: center;
+  background-color: rgba(0,0,0,0.55);
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 49px;
+  padding-right: 49px;
+  border-radius: 15px;
+  border-color: #d2d2d2;
+  border-width: 5px;
+  color: rgb(213, 176, 28);
+  box-shadow: 0 1px 0 #706565;
+  text-align: center;
 }
 
 .form-login3{
-    background-color: rgba(0,0,0,0.55);
-    padding-top: 10px;
-    padding-bottom: 20px;
-    padding-left: 20px;
+ 
+  background-color: rgba(0,0,0,0.55);
+    padding-top: -20px;
+    padding-bottom: 22px;
+    padding-left: -27px;
+    margin-right: -9px;
+    margin-top: -5px;
     padding-right: 20px;
+    margin-top: -8px;
     border-radius: 15px;
-    border-color:#d2d2d2;
-    border-width: 5px;
-    color:rgb(213, 176, 28);
-    box-shadow:0 1px 0 #706565;
+    border-color: #d2d2d2;
+    border-width: -24px;
+    color: rgb(213, 176, 28);
+    box-shadow: 0 1px 0 #706565;
     text-align: right;
 }
 
@@ -113,9 +117,11 @@
   }
 
 .form-control{
-    background:transparent!important;
-    color:white!important;
-    font-size: 16px!important;
+  background: #6f49b509!important;
+  color: white!important;
+  width: 46px;
+  font-size: 16px!important;
+  border-radius: 8px;
 }
 
 .form-control1{
@@ -146,10 +152,11 @@
 }
 
 .form1-control{
-  background:transparent!important;
-  color:rgb(196, 77, 77)!important;
+  background: #6f49b50c!important;
+  color: white!important;
+  width: 116px;
   font-size: 16px!important;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .item{
@@ -185,6 +192,7 @@ h3{
     margin-left: auto;
     margin: -4px;
     padding: -7px;
+    margin-bottom: 155px;
   }
 
 .row{    
@@ -263,13 +271,18 @@ h3{
 }
 
 .img5{
-    display: block;
+  display: block;
     border-radius: 8px;
-    display: block;
-    /* margin-left: auto; */
-    margin-right: auto;
-    width: 34%;
-    margin-left: 5%;
+    /* display: block; */
+    margin-left: 13px;
+    float: left;
+    padding-left: -37px;
+    margin-right: 100px;
+    width: 20%;
+    padding-left: -127px;
+    padding-right: -22px;
+    padding: 0px 0px;
+    /* margin-left: -43px;*/
       
 }
 .img6{
@@ -285,4 +298,17 @@ h3{
 
 .total2{
   display: inline;
+}
+
+.titre1{
+  color: #28d584;
+  text-shadow: rgb(228, 200, 195);
+  font-size: 16px;
+  margin-right: 322px;
+  /* float: left; */
+  padding-left: -78px;
+  padding-left: -28px;
+  /* margin-left: 101px; */
+  padding-bottom: -111px;
+  margin-top: 42px;
 }

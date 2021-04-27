@@ -2,17 +2,17 @@
 <!-- header -->
 
 <header>
-      <h1 id="logo"><a href="">The biker</a></h1>
+      <h1 id="logo"><a href="acceuil.php">The biker</a></h1>
       <nav>
         <ul>
-          <li class="active"><a href="">Acceuil</a></li>
+          <li class="active"><a href="acceuil.php">Acceuil</a></li>
           <li class="deroulant"><a href="">Articles </a>
             <ul class="sous">
-              <li><a href="#">Tout-Terrain</a></li>
-              <li><a href="#">Routière</a></li>
-              <li><a href="#">Roadster</a></li>
-              <li><a href="#">Sportive</a></li>
-              <li><a href="#">Cruiser</a></li>
+              <li><a href="produits.php">Tout-Terrain</a></li>
+              <li><a href="produits.php">Routière</a></li>
+              <li><a href="produits.php">Roadster</a></li>
+              <li><a href="produits.php">Sportive</a></li>
+              <li><a href="produits.php">Cruiser</a></li>
              
             </ul>
           </li>
@@ -22,7 +22,7 @@
       <nav class="responsive2">
         <ul>
            <li class="responsive2"><a href="panier.php">Panier</a> </li>
-           
+
           <li><a href="connexion.php">Compte</a></li>
         </ul>
 

@@ -1,12 +1,19 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
 <title>inscription</title>
 </head>
 <body>
-    
+
 <link rel="stylesheet" href="/css/styse.css" />
 <link rel="stylesheet" href="/css/background.css" />
+
+
+ 
+
 
 <div class="container">
     <div class="row">
@@ -49,11 +56,13 @@ if(isset($_POST['fronlogin'])){
                 ?>
                 <div class="sentence8" > <?php echo "Le mot de passe est bon !"; ?></div>
 
+                <p> votre pseudo : <?=$_SESSION['pseudo'] = $result['pseudo']; ?> </p>
+
+              <?php  header("Location: produits.php");
+                exit(); ?>
                 <?php
              
               
-                header("Location: produits.php");
-                exit();
             }else{ ?>
                 <div class="sentence9" > <?php   echo "Le mot de passe n'est pas correcte.";}?></div>
            <?php     

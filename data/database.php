@@ -9,7 +9,7 @@
     try{
         $db=new PDO("mysql:host=".HOST.";dbname=" .DB_NAME, USER, PASS);
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo "connected > ok";
+        //echo "connected > ok";
     }catch(PDOException $erreur){
         echo $erreur;
     }

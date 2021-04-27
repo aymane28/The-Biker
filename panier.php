@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,8 +7,8 @@
 <body>
 <body
 background="/img/blue.jpg"></bodybackground>
-<link rel="stylesheet" href="/css/styde.css" />
-<link rel="stylesheet" href="/css/styme.css" />
+<link rel="stylesheet" href="/css/styze.css" />
+<link rel="stylesheet" href="/css/styne.css" />
 <?php
 
 include("header.php");
@@ -44,7 +45,7 @@ if(isset($_GET["current_value"]))
                 <form method="post">
                     <div class="total" >
                         <p> Prix à payer </p><input type="text" class="form1-control input-sm chat-input"value=" <?php
-echo $price = isset($_GET['price']) ? $_GET['price'] : NULL;
+echo $price = isset($_GET['price']) ? $_GET['price'] : NULL ." 0 €";
 ?>">
                     </div></br></br>
                 </form></br>
@@ -64,13 +65,16 @@ echo $price = isset($_GET['price']) ? $_GET['price'] : NULL;
               <div class="form-login3" ></br>
                     <form name="form2" method="get">
                          <p> Quantité </p><input type="text" class="form-control input-sm chat-input"value=" <?php
- echo $quantité = isset($_GET['quantité']) ? $_GET['quantité'] : NULL;
+ echo $quantité = isset($_GET['quantité']) ? $_GET['quantité'] : NULL. "0";
 ?>">
                     <!--    <input type="text" name="current_value"class="form-control1 input-sm chat-input" value="<?php echo $current_value; ?>"/>
 -->
                     <img class ="img5" src=" <?php
  echo $image = isset($_GET['image']) ? $_GET['image'] : NULL; 
-?>">    </br> 
+?>">    <div  class ="titre1">
+ <p> <?php
+ echo $name = isset($_GET['name']) ? $_GET['name'] : NULL; 
+?> </p>  </div>  
                         
                     </form>
                  </div>

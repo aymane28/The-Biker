@@ -49,12 +49,13 @@ switch($_GET["action"]) {
 <TITLE>Produits</TITLE>
 <link href="style.css" type="text/css" rel="stylesheet" />
 <link rel="stylesheet" href="/css/stype.css" />
-<link rel="stylesheet" href="/css/styme.css" />
+<link rel="stylesheet" href="/css/styne.css" />
 <link rel="stylesheet" href="/css/style.css" />
 </HEAD>
 <BODY>
 <body
     background="/img/blue.jpg"></bodybackground>
+	
 	<?php
 include("header.php");?>
 <div id="shopping-cart">
@@ -93,8 +94,8 @@ if(isset($_SESSION["cart_item"])){
 				<td><?php echo $item["type"]; ?></td>
 				<td style="text-align:right;"><?php echo $item["quantity"]; ?></td>
 				<td  style="text-align:right;"><?php echo $item["prix"]." €"; ?></td>
-				<td  style="text-align:right;"><?php echo number_format($item_prix,2)." €"; ?></td>
-				<td style="text-align:center;"><a href="produits.php?action=remove&type=<?php echo $item["type"]; ?>" class="btnRemoveAction"><img src="icon-delete.png" alt="Remove Item" /></a></td>
+				<td  style="text-align:right;"><?php echo $item_prix." €"; ?></td>
+				<td style="text-align:center;"><a href="produits.php?action=remove&type=<?php echo $item["type"]; ?>" class="btnRemoveAction"><img src="/img/icon-delete.png" alt="Remove Item" /></a></td>
 				</tr>
 				<?php
 				$total_quantity += $item["quantity"];
@@ -104,17 +105,19 @@ if(isset($_SESSION["cart_item"])){
 
 <form action="panier.php" method="get" >
 	<div class="hidden">
-	<input name ="price" value="<?php echo number_format($total_prix, 2) ?>">
+	<input name ="price" value="<?php echo $total_prix." €" ?>">
 	<input name ="quantité" value="<?php echo $total_quantity; ?>">
 	<input name ="image" value="<?php echo $item["image"];  ?>">
+	<input name ="name" value="<?php echo $item["name"];  ?>">
 	</div>
-	<input type="submit" name="envoi" class="sub1" value="Vérifiez votre panier" />
+	<!--<input type="submit" name="envoi" class="sub1" value="Vérifiez votre panier" />-->
+	<input type="submit" name="envoi" class="sub2" value="Vérifiez votre panier" />
 </form>
 
 <tr>
 <td colspan="2" align="right">Total:</td>
 <td align="right"><?php echo $total_quantity; ?></td>
-<td align="right" colspan="2"><strong><?php echo number_format($total_prix, 2)." €"; ?></strong></td>
+<td align="right" colspan="2"><strong><?php echo $total_prix." €"; ?></strong></td>
 <td></td>
 </tr>
 </tbody>

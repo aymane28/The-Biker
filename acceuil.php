@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,7 +7,7 @@
     </head> <body>
     <body
     background="/img/blue.jpg"></bodybackground>
-    <link rel="stylesheet" href="/css/styme.css" />
+    <link rel="stylesheet" href="/css/styne.css" />
 
 <?php
 
