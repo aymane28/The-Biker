@@ -12,18 +12,22 @@
     <div class="row">
         <div class="col-md-offset-5 col-md-4 text-center">
             <h1 class='text-white'>S'inscrire</h1></br>   
-                <div class="form-login"></br></br>
+                <div class="form-login"></br>
                      <form method="post">
-                            <input type="text" name="pseudo" id="pseudo" class="form-control input-sm chat-input" placeholder="Identifiant" required> <br/></br></br>   
-                            <input type="text" name="semail" id="semail" class="form-control input-sm chat-input"placeholder="Votre email" required><br/></br></br>   
-                            <input type="password" name="lpassword" id="lpassword" class="form-control input-sm chat-input" placeholder="Mot de passe" required>   </br></br></br>   
+                            <input type="text" name="pseudo" id="pseudo" class="form-control input-sm chat-input" placeholder="Identifiant" required> <br/></br>  
+                            <input type="text" name="semail" id="semail" class="form-control input-sm chat-input"placeholder="Votre email" required><br/></br>  
+                            <input type="password" name="lpassword" id="lpassword" class="form-control input-sm chat-input" placeholder="Mot de passe" required>   </br></br>  
                                 <div class="wrapper">
                                     <input type="submit" name="fronsend" class="btn-danger"id="Signin">     
                                 </div>
                         </form></br>
+                        <div class="item">
+                             <h3>Vous avez déjà un compte?</h3>
+                                <a href="connexion.php" class="test"> <h4> Se connecter</h4></a>      
+                        </div>
                 </div>
         </div>
-    </div></br></br></br>    
+    </div></br></br>  
 </div>
 
 <?php include 'data/database.php';  global $db;?>

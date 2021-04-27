@@ -2,7 +2,7 @@
 <!-- header -->
 
 <header>
-      <h1 id="logo"><a href="acceuil.php">The biker</a></h1>
+      <h1 id="logo"><a href="acceuil.php">The Biker</a></h1>
       <nav>
         <ul>
           <li class="active"><a href="acceuil.php">Acceuil</a></li>
