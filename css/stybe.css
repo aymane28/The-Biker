@@ -454,3 +454,34 @@
     .sess{
       background-color: teal;
     }
+
+    .modify{
+
+      color: #fff;
+    background-color: #199e60;
+    border-color: #199e60;
+    padding: 8px;
+    margin-top: 279px;
+    border-radius: 13px;
+    font-size: 19px;
+    cursor: pointer;
+    margin-left: 500px;
+    padding: center;
+    /* margin-top: 32px; */
+    float: center;
+    }
+
+    .deconnexion {
+      /* float: left; */
+      color: #fff;
+      border-radius: 6px;
+      margin-right: 93px;
+      margin-left: -27px;
+      float: right;
+      font-size: 16px;
+      font-style: italic;
+      padding: 11px;
+      font-family: cursive;
+      margin-top: 87px;
+      background-color: #f14848;
+  }

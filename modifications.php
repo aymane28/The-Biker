@@ -5,8 +5,11 @@
 <title>Mofications</title>
 </head>
 <body>
+<link rel="stylesheet" href="/css/styke.css" />
+<link rel="stylesheet" href="/css/styme.css" />
+<link rel="stylesheet" href="/css/styce.css" />
 
-<link rel="stylesheet" href="/css/styse.css" />
+
 <link rel="stylesheet" href="/css/background.css" />
 
 <?php include 'data/database.php';global $db; global $dr;?>

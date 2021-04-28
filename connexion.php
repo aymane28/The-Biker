@@ -11,7 +11,8 @@ session_start();
 <link rel="stylesheet" href="/css/styse.css" />
 <link rel="stylesheet" href="/css/background.css" />
 
-
+<?php if (isset($_SESSION['pseudo'])) {
+    header("Location:modifications.php");} ?>
  
 
 
@@ -56,11 +57,15 @@ if(isset($_POST['fronlogin'])){
                 ?>
                 <div class="sentence8" > <?php echo "Le mot de passe est bon !"; ?></div>
 
-                <p> votre pseudo : <?=$_SESSION['email'] = $result['email']; ?> </p>
+                <p> votre pseudo : <?=$_SESSION['pseudo'] = $result['pseudo']; ?> </p>
                 <p> votre pseudo : <?=$_SESSION['id'] = $result['id']; ?> </p>
 
+                
 
-              <?php  header("Location: produits.php/".$result['id']."");
+<p> votre pseudo : <?=$result['email']; ?> </p>
+
+
+              <?php  header("Location: acceuil.php");
                 exit(); ?>
                 <?php
              
@@ -76,5 +81,6 @@ if(isset($_POST['fronlogin'])){
                 <?php
             }
 ?>
+
 </body>
 </html>

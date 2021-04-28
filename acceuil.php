@@ -11,19 +11,30 @@ $db_handle = new DBController();?>
     </head> <body>
     <body
     background="/img/blue.jpg"></bodybackground>
-    <link rel="stylesheet" href="/css/styne.css" />
+    <link rel="stylesheet" href="/css/stype.css" />
+<link rel="stylesheet" href="/css/styme.css" />
+<link rel="stylesheet" href="/css/styce.css" />
+
+
+
+
+
 
 <?php
 
 include("header.php");
 ?>
-   
+   <?php if (isset($_SESSION['pseudo'])) { ?>
+    <form action="zakariya.php">
+    <input type="submit" name="envoi" class="sub1" value="Déconnexion" /> </form> <?php }  ?>
+
 <!-- Le corps -->
 <section class="hero grid3">
-  <h2>The Biker</h2>
+  <h2>The Biker</h2></br></br></br></br>
   <h1>Venez découvrir notre site de vente de moto</h1>
   <p>Nous vous proposons différentes marques de moto.</p>
-  <a href="" class="button normal green">Savoir plus</a>
+  
+  <a href="" class="button normal green"></a>
 </section>
 
     <img class="img1" src="https://so-sport.fr/wp-content/uploads/2018/08/course-moto-route.jpg">

@@ -1,9 +1,4 @@
-<?php
-// Démarre la session pour avoir les informations de l'utilisateur
-if (session_status() == PHP_SESSION_NONE){
-  session_start();
-  session_destroy();
-} ?>
+
 
 <!DOCTYPE html>
 <html lang="fr">

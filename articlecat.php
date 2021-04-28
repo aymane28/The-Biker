@@ -10,7 +10,7 @@ $db_handle = new DBController();?>
 <TITLE>Produits</TITLE>
 <link href="style.css" type="text/css" rel="stylesheet" />
 <link rel="stylesheet" href="/css/stype.css" />
-<link rel="stylesheet" href="/css/styne.css" />
+<link rel="stylesheet" href="/css/styme.css" />
 <link rel="stylesheet" href="/css/style.css" />
 </HEAD>
 <BODY>
@@ -19,14 +19,11 @@ $db_handle = new DBController();?>
 	<?php
 include("header.php");?>
 
-<div class="txt-heading1"><?php echo $_GET["test"]; ?></div>
-
-
-
-
 <div id="product-grid">
 	<div class="txt-heading">Produits</div>
+	<div class="txt-heading1"><?php echo $_GET["test"]; ?></div>
 	<?php
+	
 	$product_array = $db_handle->runQuery("SELECT * FROM articles where type='" . $_GET["test"] . "' ORDER BY id ASC");
 	if (!empty($product_array)) { 
 		foreach($product_array as $key=>$value){

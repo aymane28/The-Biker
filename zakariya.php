@@ -5,54 +5,29 @@
 <title>Inscription</title>
 </head>
 <body> 
-<link rel="stylesheet" href="/css/styse.css" />
+<link rel="stylesheet" href="/css/stybe.css" />
+<link rel="stylesheet" href="/css/stype.css" />
+<link rel="stylesheet" href="/css/styme.css" />
+<link rel="stylesheet" href="/css/styce.css" />
 <link rel="stylesheet" href="/css/background.css" />
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-offset-5 col-md-4 text-center">
-            <h1 class='text-white'>S'inscrire</h1></br>   
-                <div class="form-login"></br>
-                     <form method="post">
-                            <input type="text" name="pseudo" id="pseudo" class="form-control input-sm chat-input" placeholder="Identifiant" required> <br/></br>  
-                                <div class="wrapper">
-                                    <input type="submit" name="fronsend" class="btn-danger"id="Signin">     
-                                </div>
-                        </form></br>
-                      
-                </div>
-        </div>
-    </div></br></br>  
-</div>
+<!--
+<input id="demo"></input>
 
-<?php include 'data/database.php';  global $db;?>
+<script>
+    var a = true;
+    if(a==true){
+document.getElementById("demo").innerHTML = "Hello World!";}
+</script>-->
 
-<?php
-if(isset($_POST['fronsend'])){
-    extract($_POST);
 
-    if(!empty($_POST['pseudo'])){
-        $options=['cost'=>12,];
-       
-      
-        $c = $db->prepare("SELECT * FROM utilisateurs");
-       
-        $result = $c->rowCount();
 
-        if($result ==0){
-        $q= $db ->prepare("INSERT INTO utilisateurs(pseudo) VALUES(:pseudo)");
-        $q ->execute([
-        'pseudo' => $_POST['pseudo']
-        
-       
-        ]);?>
-        <div class="sentence" > <?php echo "Le compte a été crée !";?></div>
-    <?php
-    }else{ ?>
-        <div class="sentence11" > <?php echo "L'adresse mail saisie existe déjà";}?></div>
-        <?php
-     }
-}
-?>
+<a href="modifications.php">
+<input type="submit" name="envoi" class="modify" value="Modifier ses informations" /></a>
+
+<a href="Deconnexion.php">
+<input type="submit" name="envoi" class="deconnexion" value="Déconnexion" /></a>
+
+
 </body>
 </html>

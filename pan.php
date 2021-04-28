@@ -55,9 +55,15 @@ switch($_GET["action"]) {
 <BODY>
 <body
     background="/img/blue.jpg"></bodybackground>
-	
+	<link rel="stylesheet" href="/css/stype.css" />
+<link rel="stylesheet" href="/css/styme.css" />
+<link rel="stylesheet" href="/css/styce.css" />
 	<?php
 include("header.php");?>
+
+   <?php if (isset($_SESSION['pseudo'])) { ?>
+    <form action="zakariya.php">
+    <input type="submit" name="envoi" class="sub1" value="Déconnexion" /> </form> <?php }  ?>
 <div id="shopping-cart">
 <div class="txt-heading">Panier</div>
 
@@ -110,8 +116,7 @@ if(isset($_SESSION["cart_item"])){
 	<input name ="image" value="<?php echo $item["image"];  ?>">
 	<input name ="name" value="<?php echo $item["name"];  ?>">
 	</div>
-	<!--<input type="submit" name="envoi" class="sub1" value="Vérifiez votre panier" />-->
-	<input type="submit" name="envoi" class="sub0" value="panier" />
+	
 	<img type="submit" class="imge" src="/img/panier.png"/>
 </form>
 
