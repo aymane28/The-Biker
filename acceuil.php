@@ -11,13 +11,9 @@ $db_handle = new DBController();?>
     </head> <body>
     <body
     background="/img/blue.jpg"></bodybackground>
-    <link rel="stylesheet" href="/css/stype.css" />
-<link rel="stylesheet" href="/css/styme.css" />
-<link rel="stylesheet" href="/css/styce.css" />
-
-
-
-
+    <link rel="stylesheet" href="/css/styke.css" />
+<link rel="stylesheet" href="/css/styne.css" />
+<link rel="stylesheet" href="/css/styje.css" />
 
 
 <?php
@@ -25,7 +21,7 @@ $db_handle = new DBController();?>
 include("header.php");
 ?>
    <?php if (isset($_SESSION['pseudo'])) { ?>
-    <form action="zakariya.php">
+    <form action="deconnexion.php">
     <input type="submit" name="envoi" class="sub1" value="Déconnexion" /> </form> <?php }  ?>
 
 <!-- Le corps -->

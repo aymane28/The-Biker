@@ -6,8 +6,8 @@
 </head>
 <body>
 <link rel="stylesheet" href="/css/styke.css" />
-<link rel="stylesheet" href="/css/styme.css" />
-<link rel="stylesheet" href="/css/styce.css" />
+<link rel="stylesheet" href="/css/styne.css" />
+<link rel="stylesheet" href="/css/styje.css" />
 
 
 <link rel="stylesheet" href="/css/background.css" />

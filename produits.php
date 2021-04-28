@@ -59,8 +59,15 @@ switch($_GET["action"]) {
 	<?php
 include("header.php");?>
 
+<?php
+// remove all session variables
+session_unset();
+
+// destroy the session
+session_destroy();
+?>
    <?php if (isset($_SESSION['pseudo'])) { ?>
-    <form action="zakariya.php">
+    <form action="deconnexion.php">
     <input type="submit" name="envoi" class="sub1" value="Déconnexion" /> </form> <?php }  ?>
 
 

@@ -62,7 +62,7 @@ switch($_GET["action"]) {
 include("header.php");?>
 
    <?php if (isset($_SESSION['pseudo'])) { ?>
-    <form action="zakariya.php">
+    <form action="deconnexion.php">
     <input type="submit" name="envoi" class="sub1" value="Déconnexion" /> </form> <?php }  ?>
 <div id="shopping-cart">
 <div class="txt-heading">Panier</div>

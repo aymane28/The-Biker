@@ -4,11 +4,11 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-<title>inscription</title>
+<title>Connexion</title>
 </head>
 <body>
 
-<link rel="stylesheet" href="/css/styse.css" />
+<link rel="stylesheet" href="/css/styke.css" />
 <link rel="stylesheet" href="/css/background.css" />
 
 <?php if (isset($_SESSION['pseudo'])) {
